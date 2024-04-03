@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Main-Class: it.gestore_attivita.gestore_attivita.GestoreAttivitaApplicat
+ ion
+

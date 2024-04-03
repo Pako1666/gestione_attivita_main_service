@@ -1,10 +1,58 @@
 services:
-  mysql:
-    image: 'mysql:latest'
+  mysql_db:
+    image: "mysql:latest"
+    container_name: "mysql_db"
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
     environment:
-      - 'MYSQL_DATABASE=mydatabase'
-      - 'MYSQL_PASSWORD=secret'
-      - 'MYSQL_ROOT_PASSWORD=verysecret'
-      - 'MYSQL_USER=myuser'
+      - "MYSQL_DATABASE=gestione_attivita"
+      - "MYSQL_PASSWORD=mysql"
+      - "MYSQL_USER=mysql"
+      - "MYSQL_ROOT_PASSWORD=mysql"
+      - "MYSQL_ALLOW_EMPTY_PASSWORD=yes"
+      - "MYSQL_RANDOM_ROOT_PASSWORD=no"
     ports:
-      - '3306'
+      - "3306:3306"
+    networks:
+      conn:
+        ipv4_address: 192.168.1.2
+
+
+  logservice:
+   container_name: 'logservice'
+   hostname: logservice.com
+   build:
+     context: '../../../service_2/gestione_attivita_log_service/log_service'
+     dockerfile: '../../../service_2/gestione_attivita_log_service/log_service/Dockerfile'
+   
+   
+   
+   networks:
+      conn:
+        ipv4_address: 192.168.1.3
+     
+
+  gestione_attivita:
+   container_name: gestione_attivita
+   hostname: gestioneattivita.com
+   build:
+     context: .
+     dockerfile: Dockerfile
+    
+   networks:
+      conn:
+        ipv4_address: 192.168.1.4
+
+   depends_on:
+     mysql_db:
+       condition: service_started
+     logservice:
+       condition: service_started
+
+networks:
+  conn:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 192.168.1.0/24
+

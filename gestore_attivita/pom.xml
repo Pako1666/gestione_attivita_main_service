@@ -51,6 +51,7 @@
 			<artifactId>mysql-connector-j</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
@@ -131,7 +132,7 @@
 				<artifactId>swagger-codegen-maven-plugin</artifactId>
 				<version>2.4.7</version>
 				<executions>
-					<execution>
+					<!--execution>
 						<goals>
 							<goal>generate</goal>
 						</goals>
@@ -154,7 +155,7 @@
 								<sourceFolder>restclient</sourceFolder>
 							</configOptions>
 						</configuration>
-					</execution>
+					</execution -->
 				</executions>
 			</plugin>
 		</plugins>

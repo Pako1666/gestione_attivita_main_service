@@ -17,7 +17,7 @@ import java.util.Map;
 public class WebServiceConfig {
 
     private RestTemplate restTemplate;
-    private String baseUrl = "http://localhost:5050/v1/logs-api/";
+    private String baseUrl = "http://192.168.1.3:5050/v1/logs-api/";
 
     private static WebServiceConfig instance;
 
@@ -25,10 +25,7 @@ public class WebServiceConfig {
         //HttpComponentsClientHttpRequestFactory httpRequestFactory = new HttpComponentsClientHttpRequestFactory();
        // httpRequestFactory.setConnectionRequestTimeout(5000);
         //restTemplate = new RestTemplate();
-        restTemplate = new RestTemplateBuilder()
-                .setConnectTimeout(Duration.ofSeconds(5))
-                .setReadTimeout(Duration.ofSeconds(5))
-                .build();
+        restTemplate = new RestTemplateBuilder().build();
 
     }
 

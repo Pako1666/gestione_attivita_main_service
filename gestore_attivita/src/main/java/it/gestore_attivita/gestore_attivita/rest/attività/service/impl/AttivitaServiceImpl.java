@@ -13,6 +13,7 @@ import it.gestore_attivita.gestore_attivita.ws.WebServiceConfig;
 import it.gestore_attivita.gestore_attivita.ws.model.AttivitaRequestDto;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -26,7 +27,7 @@ import java.util.stream.Collectors;
 public class AttivitaServiceImpl implements AttivitaService {
 
     @Autowired
-    private AttivitaRepository repository;
+    private AttivitaRepository attivitaRepository;
 
     @Autowired
     private WebServiceConfig webServiceConfig;
@@ -38,7 +39,7 @@ public class AttivitaServiceImpl implements AttivitaService {
 
         //recupero dal DB l'attività
 
-        AttivitaModel attivitaModel = repository.findById(id).orElseThrow(
+        AttivitaModel attivitaModel = attivitaRepository.findById(id).orElseThrow(
                 () -> new NotFoundException(
                         String.format("Attività #%d non trovata", id.intValue())
                 )
@@ -54,7 +55,7 @@ public class AttivitaServiceImpl implements AttivitaService {
     @Override
     public List<AttivitaResponseDto> getAllAttivita() {
 
-        List<AttivitaResponseDto> attivitas = repository.findAll()
+        List<AttivitaResponseDto> attivitas = attivitaRepository.findAll()
                 .stream()
                 .map(a -> fromModelToDto(a))
                 .collect(Collectors.toList());
@@ -67,7 +68,7 @@ public class AttivitaServiceImpl implements AttivitaService {
 
     private List<AttivitaResponseDto> getAllAttivitaByAttivitaPadre(Long idFather) throws NotFoundException {
 
-        List<Long> listId = repository.findAllIds();
+        List<Long> listId = attivitaRepository.findAllIds();
         Set<AttivitaModel> attivitas = new HashSet<>();
 
         if(!listId.contains(idFather)){
@@ -82,12 +83,12 @@ public class AttivitaServiceImpl implements AttivitaService {
                         .toList()
         );*/
 
-        AttivitaModel attivitaPadre = repository.findById(idFather).get();
+        AttivitaModel attivitaPadre = attivitaRepository.findById(idFather).get();
         attivitas.add(attivitaPadre);
 
         while(attivitaPadre.getAttivitaPadre()!=null||
                 (attivitaPadre.getAttivitaPadre()!=null&&attivitaPadre.getLavorata().equals("SI"))){
-            attivitaPadre = repository
+            attivitaPadre = attivitaRepository
                     .findById(attivitaPadre.getAttivitaPadre())
                     .orElseThrow(()->new NotFoundException("Nessun attività trovata"));
 
@@ -112,7 +113,7 @@ public class AttivitaServiceImpl implements AttivitaService {
         model.setAlias(req.getAlias());
         model.setLavorata(req.getLavorata());
 
-        AttivitaResponseDto dto = fromModelToDto(repository.save(model));
+        AttivitaResponseDto dto = fromModelToDto(attivitaRepository.save(model));
 
         AttivitaRequestDto att = AttivitaRequestDto
                 .builder()
@@ -195,7 +196,7 @@ public class AttivitaServiceImpl implements AttivitaService {
             attivitaM = fromDtoToModel(this.getAttivita(idAttivita));
             if(attivitaM.getLavorata().equals("NO")){
                 attivitaM.setLavorata("SI");
-                repository.save(attivitaM);
+                attivitaRepository.save(attivitaM);
                 resp.setMessage("Attività lavorata con successo");
             }
 

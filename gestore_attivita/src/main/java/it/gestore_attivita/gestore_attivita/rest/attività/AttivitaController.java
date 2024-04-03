@@ -13,6 +13,7 @@ import it.gestore_attivita.gestore_attivita.rest.attività.dto.LavoraAttivitaDto
 import it.gestore_attivita.gestore_attivita.rest.attività.dto.VerificaAttivitaDto;
 import it.gestore_attivita.gestore_attivita.rest.attività.model.AttivitaModel;
 import it.gestore_attivita.gestore_attivita.rest.attività.service.AttivitaService;
+import it.gestore_attivita.gestore_attivita.rest.attività.service.impl.AttivitaServiceImpl;
 import it.gestore_attivita.gestore_attivita.ws.LogEndpoints;
 import lombok.Builder;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +28,7 @@ import java.util.List;
 public class AttivitaController {
 
     @Autowired
-    private AttivitaService attivitaService;
+    private AttivitaServiceImpl attivitaService;
 
 
     @Operation(summary="returns all Attivita entities stored into database")

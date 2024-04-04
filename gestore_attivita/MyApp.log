@@ -1733,3 +1733,72 @@ Caused by: org.hibernate.HibernateException: Unable to determine Dialect without
 2024-04-04T09:50:58.998+02:00  INFO 36560 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
 2024-04-04T09:50:59.050+02:00  INFO 36560 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
 2024-04-04T09:50:59.066+02:00  INFO 36560 --- [restartedMain] i.g.g.GestoreAttivitaApplication         : Started GestoreAttivitaApplication in 8.655 seconds (process running for 9.548)
+2024-04-04T10:08:18.435+02:00  INFO 36560 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-04T10:08:18.489+02:00  INFO 36560 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-04-04T10:08:18.498+02:00  INFO 36560 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-04-04T10:08:26.758+02:00  INFO 6392 --- [restartedMain] i.g.g.GestoreAttivitaApplication         : Starting GestoreAttivitaApplication using Java 20.0.1 with PID 6392 (C:\Users\hp\Desktop\ZERODD\Java\activity\gestore_attivita\gestione_attivita_main_service\gestore_attivita\target\classes started by hp in C:\Users\hp\Desktop\ZERODD\Java\activity\gestore_attivita\gestione_attivita_main_service\gestore_attivita)
+2024-04-04T10:08:26.762+02:00  INFO 6392 --- [restartedMain] i.g.g.GestoreAttivitaApplication         : The following 1 profile is active: "local"
+2024-04-04T10:08:26.893+02:00  INFO 6392 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-04-04T10:08:28.496+02:00  INFO 6392 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-04T10:08:28.588+02:00  INFO 6392 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 81 ms. Found 1 JPA repository interface.
+2024-04-04T10:08:30.294+02:00  INFO 6392 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-04-04T10:08:30.333+02:00  INFO 6392 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-04-04T10:08:30.334+02:00  INFO 6392 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-04T10:08:30.501+02:00  INFO 6392 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-04-04T10:08:30.502+02:00  INFO 6392 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3608 ms
+2024-04-04T10:08:30.586+02:00  INFO 6392 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-04T10:08:31.245+02:00  INFO 6392 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:C:/Users/hp/Desktop/ZERODD/Java/activity/gestore_attivita/gestione_attivita_main_service/gestore_attivita/H2db user=YOUR_USERNAME
+2024-04-04T10:08:31.249+02:00  INFO 6392 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-04T10:08:31.263+02:00  INFO 6392 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:C:/Users/hp/Desktop/ZERODD/Java/activity/gestore_attivita/gestione_attivita_main_service/gestore_attivita/H2db'
+2024-04-04T10:08:31.280+02:00 TRACE 6392 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Added existing Servlet initializer bean 'dispatcherServletRegistration'; order=2147483647, resource=class path resource [org/springframework/boot/autoconfigure/web/servlet/DispatcherServletAutoConfiguration$DispatcherServletRegistrationConfiguration.class]
+2024-04-04T10:08:31.281+02:00 TRACE 6392 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Added existing Servlet initializer bean 'h2Console'; order=2147483647, resource=class path resource [org/springframework/boot/autoconfigure/h2/H2ConsoleAutoConfiguration.class]
+2024-04-04T10:08:31.305+02:00 TRACE 6392 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Created Filter initializer for bean 'characterEncodingFilter'; order=-2147483648, resource=class path resource [org/springframework/boot/autoconfigure/web/servlet/HttpEncodingAutoConfiguration.class]
+2024-04-04T10:08:31.306+02:00 TRACE 6392 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Created Filter initializer for bean 'formContentFilter'; order=-9900, resource=class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration.class]
+2024-04-04T10:08:31.306+02:00 TRACE 6392 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Created Filter initializer for bean 'requestContextFilter'; order=-105, resource=class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]
+2024-04-04T10:08:31.313+02:00 DEBUG 6392 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
+2024-04-04T10:08:31.314+02:00 DEBUG 6392 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: dispatcherServlet urls=[/], h2Console urls=[/h2-console/*]
+2024-04-04T10:08:31.740+02:00  INFO 6392 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-04T10:08:32.083+02:00  INFO 6392 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-04T10:08:32.219+02:00  INFO 6392 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-04T10:08:32.828+02:00  INFO 6392 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-04T10:08:34.271+02:00  INFO 6392 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-04T10:08:34.319+02:00  INFO 6392 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-04T10:08:34.909+02:00  INFO 6392 --- [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-04-04T10:08:35.809+02:00  WARN 6392 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-04T10:08:35.968+02:00 TRACE 6392 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	i.g.g.r.a.AttivitaController:
+	{PUT [/v1/attivita-api/attivita/lavora/{idAttivita}]}: lavoraAttivita(Long)
+	{GET [/v1/attivita-api/all-attivita/]}: attivitaList()
+	{POST [/v1/attivita-api/insert/]}: insertAttivita(InsertAttivitaRequestDto)
+	{GET [/v1/attivita-api/attivita/{id}]}: getAttivitaById(Long)
+	{GET [/v1/attivita-api/attivita/verifica/{idAttivita}]}: checkLavorabilitaAttivita(Long)
+2024-04-04T10:08:35.986+02:00 TRACE 6392 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2024-04-04T10:08:36.021+02:00 TRACE 6392 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/v3/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/v3/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)
+2024-04-04T10:08:36.027+02:00 TRACE 6392 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)
+2024-04-04T10:08:36.032+02:00 TRACE 6392 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/v3/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)
+2024-04-04T10:08:36.043+02:00 DEBUG 6392 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 11 mappings in 'requestMappingHandlerMapping'
+2024-04-04T10:08:36.081+02:00 DEBUG 6392 --- [restartedMain] o.s.w.s.h.BeanNameUrlHandlerMapping      : Detected 0 mappings in 'beanNameHandlerMapping'
+2024-04-04T10:08:36.227+02:00 TRACE 6392 --- [restartedMain] o.s.w.s.f.support.RouterFunctionMapping  : 0 RouterFunction(s) in 'routerFunctionMapping'
+2024-04-04T10:08:36.262+02:00 TRACE 6392 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/webjars/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2024-04-04T10:08:36.263+02:00 TRACE 6392 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-04-04T10:08:36.265+02:00 TRACE 6392 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/swagger-ui*/*swagger-initializer.js] onto ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2024-04-04T10:08:36.265+02:00 TRACE 6392 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/swagger-ui*/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2024-04-04T10:08:36.266+02:00 DEBUG 6392 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2024-04-04T10:08:36.371+02:00 DEBUG 6392 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-04T10:08:36.435+02:00 DEBUG 6392 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-04T10:08:36.825+02:00  INFO 6392 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-04-04T10:08:36.884+02:00  INFO 6392 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-04-04T10:08:36.900+02:00  INFO 6392 --- [restartedMain] i.g.g.GestoreAttivitaApplication         : Started GestoreAttivitaApplication in 10.967 seconds (process running for 12.304)
+2024-04-04T10:08:53.464+02:00  INFO 6392 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-04T10:08:53.469+02:00  INFO 6392 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-04-04T10:08:53.472+02:00  INFO 6392 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

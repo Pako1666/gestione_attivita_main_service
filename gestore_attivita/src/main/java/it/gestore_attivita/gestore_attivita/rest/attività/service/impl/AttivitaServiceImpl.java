@@ -1,7 +1,6 @@
 package it.gestore_attivita.gestore_attivita.rest.attività.service.impl;
 
 
-import it.gestore_attivita.gestore_attivita.avro.AttivitaResponseDtoGenerated;
 import it.gestore_attivita.gestore_attivita.exception.NotFoundException;
 import it.gestore_attivita.gestore_attivita.rest.attività.dto.AttivitaResponseDto;
 import it.gestore_attivita.gestore_attivita.rest.attività.dto.InsertAttivitaRequestDto;
@@ -26,6 +25,7 @@ import java.util.stream.Collectors;
 @Service
 @Slf4j
 public class AttivitaServiceImpl implements AttivitaService {
+
 
     @Autowired
     private AttivitaRepository attivitaRepository;

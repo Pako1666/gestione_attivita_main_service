@@ -10,6 +10,7 @@ import org.springframework.test.context.ActiveProfiles;
 @SpringBootApplication
 public class GestoreAttivitaApplication {
 
+
 	public static void main(String[] args) {
 		SpringApplication.run(GestoreAttivitaApplication.class, args);
 	}

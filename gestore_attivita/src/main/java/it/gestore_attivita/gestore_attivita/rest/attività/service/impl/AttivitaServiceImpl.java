@@ -2,6 +2,7 @@ package it.gestore_attivita.gestore_attivita.rest.attività.service.impl;
 
 
 import it.gestore_attivita.gestore_attivita.exception.NotFoundException;
+import it.gestore_attivita.gestore_attivita.kafka.KafkaProducer;
 import it.gestore_attivita.gestore_attivita.rest.attività.dto.AttivitaResponseDto;
 import it.gestore_attivita.gestore_attivita.rest.attività.dto.InsertAttivitaRequestDto;
 import it.gestore_attivita.gestore_attivita.rest.attività.dto.LavoraAttivitaDto;
@@ -33,6 +34,8 @@ public class AttivitaServiceImpl implements AttivitaService {
     @Autowired
     private WebServiceConfig webServiceConfig;
 
+    @Autowired
+    private KafkaProducer kafkaProducer;
 
     @Override
     public AttivitaResponseDto getAttivita(Long id) throws Exception {
@@ -61,8 +64,8 @@ public class AttivitaServiceImpl implements AttivitaService {
                 .map(a -> fromModelToDto(a))
                 .collect(Collectors.toList());
 
-        webServiceConfig.doGet(LogEndpoints.FETCH_ALL_ATTIVITA, Boolean.class);
-
+        //webServiceConfig.doGet(LogEndpoints.FETCH_ALL_ATTIVITA, Boolean.class);
+        kafkaProducer.fetchAllAttivitas(fromDtoToModel(attivitas.get(0)));
         return attivitas;
     }
 

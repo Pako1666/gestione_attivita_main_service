@@ -1,0 +1,11 @@
+{
+  "type": "record",
+  "name": "AttivitaResponseDtoGenerated",
+  "namespace": "it.gestore_attivita.gestore_attivita.avro",
+  "fields": [
+    {"name": "id", "type": "long"},
+    {"name": "alias", "type": "string"},
+    {"name": "lavorata", "type": "boolean"},
+    {"name": "attivitaPadre", "type": ["null", "long"], "default": null}
+  ]
+}

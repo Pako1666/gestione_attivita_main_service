@@ -10,8 +10,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 public class AttivitaResponseDto {
-    public Long id;
-    public String alias;
-    public Boolean lavorata;
-    public Long attivitaPadre;
+  public Long id;
+  public String alias;
+  public Boolean lavorata;
+  public Long attivitaPadre;
 }

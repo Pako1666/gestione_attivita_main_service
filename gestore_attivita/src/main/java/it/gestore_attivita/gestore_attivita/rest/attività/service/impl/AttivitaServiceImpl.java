@@ -1,5 +1,7 @@
 package it.gestore_attivita.gestore_attivita.rest.attività.service.impl;
 
+
+import it.gestore_attivita.gestore_attivita.avro.AttivitaResponseDtoGenerated;
 import it.gestore_attivita.gestore_attivita.exception.NotFoundException;
 import it.gestore_attivita.gestore_attivita.rest.attività.dto.AttivitaResponseDto;
 import it.gestore_attivita.gestore_attivita.rest.attività.dto.InsertAttivitaRequestDto;
@@ -13,7 +15,6 @@ import it.gestore_attivita.gestore_attivita.ws.WebServiceConfig;
 import it.gestore_attivita.gestore_attivita.ws.model.AttivitaRequestDto;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -127,7 +128,6 @@ public class AttivitaServiceImpl implements AttivitaService {
         log.info(att.toString());
 
         webServiceConfig.doPost("insert-attivita", att, Boolean.class);
-
         return dto;
 
     }

@@ -21,6 +21,7 @@ import java.util.List;
 @Tag(name = "Attività")
 @RestController
 @RequestMapping("v1/attivita-api/")
+@CrossOrigin(origins = "*")
 public class AttivitaController {
 
     @Autowired

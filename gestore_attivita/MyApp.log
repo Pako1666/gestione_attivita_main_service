@@ -1,136 +1,65 @@
-2024-04-05T12:44:45.410+02:00  INFO 29392 --- [restartedMain] i.g.g.GestoreAttivitaApplication         : Starting GestoreAttivitaApplication using Java 20.0.1 with PID 29392 (C:\Users\hp\Desktop\ZERODD\Java\activity\gestore_attivita\gestione_attivita_main_service\gestore_attivita\target\classes started by hp in C:\Users\hp\Desktop\ZERODD\Java\activity\gestore_attivita\gestione_attivita_main_service\gestore_attivita)
-2024-04-05T12:44:45.428+02:00  INFO 29392 --- [restartedMain] i.g.g.GestoreAttivitaApplication         : The following 1 profile is active: "local"
-2024-04-05T12:44:45.549+02:00  INFO 29392 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-04-05T12:44:47.354+02:00  INFO 29392 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-04-05T12:44:47.467+02:00  INFO 29392 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 96 ms. Found 1 JPA repository interface.
-2024-04-05T12:44:48.866+02:00  INFO 29392 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-04-05T12:44:48.888+02:00  INFO 29392 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-04-05T12:44:48.889+02:00  INFO 29392 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
-2024-04-05T12:44:48.986+02:00  INFO 29392 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-04-05T12:44:48.987+02:00  INFO 29392 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3437 ms
-2024-04-05T12:44:49.059+02:00  INFO 29392 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-04-05T12:44:49.540+02:00  INFO 29392 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:C:/Users/hp/Desktop/ZERODD/Java/activity/gestore_attivita/gestione_attivita_main_service/gestore_attivita/H2db user=YOUR_USERNAME
-2024-04-05T12:44:49.543+02:00  INFO 29392 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-04-05T12:44:49.558+02:00  INFO 29392 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:C:/Users/hp/Desktop/ZERODD/Java/activity/gestore_attivita/gestione_attivita_main_service/gestore_attivita/H2db'
-2024-04-05T12:44:49.572+02:00 TRACE 29392 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Added existing Servlet initializer bean 'dispatcherServletRegistration'; order=2147483647, resource=class path resource [org/springframework/boot/autoconfigure/web/servlet/DispatcherServletAutoConfiguration$DispatcherServletRegistrationConfiguration.class]
-2024-04-05T12:44:49.572+02:00 TRACE 29392 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Added existing Servlet initializer bean 'h2Console'; order=2147483647, resource=class path resource [org/springframework/boot/autoconfigure/h2/H2ConsoleAutoConfiguration.class]
-2024-04-05T12:44:49.597+02:00 TRACE 29392 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Created Filter initializer for bean 'characterEncodingFilter'; order=-2147483648, resource=class path resource [org/springframework/boot/autoconfigure/web/servlet/HttpEncodingAutoConfiguration.class]
-2024-04-05T12:44:49.597+02:00 TRACE 29392 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Created Filter initializer for bean 'formContentFilter'; order=-9900, resource=class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration.class]
-2024-04-05T12:44:49.597+02:00 TRACE 29392 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Created Filter initializer for bean 'requestContextFilter'; order=-105, resource=class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]
-2024-04-05T12:44:49.602+02:00 DEBUG 29392 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
-2024-04-05T12:44:49.603+02:00 DEBUG 29392 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: dispatcherServlet urls=[/], h2Console urls=[/h2-console/*]
-2024-04-05T12:44:49.897+02:00  INFO 29392 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-04-05T12:44:50.011+02:00  INFO 29392 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
-2024-04-05T12:44:50.072+02:00  INFO 29392 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-04-05T12:44:50.487+02:00  INFO 29392 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-04-05T12:44:51.790+02:00  INFO 29392 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-04-05T12:44:51.853+02:00  INFO 29392 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-04-05T12:44:52.401+02:00  INFO 29392 --- [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2024-04-05T12:44:53.204+02:00  WARN 29392 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-04-05T12:44:53.353+02:00 TRACE 29392 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+2024-04-15T09:25:36.504+02:00  INFO 22076 --- [restartedMain] i.g.g.GestoreAttivitaApplication         : Starting GestoreAttivitaApplication using Java 22 with PID 22076 (C:\Users\RAFFAELE\Desktop\esercitazione\gestione_attivita\gestione_attivita_main_service\gestore_attivita\target\classes started by RAFFAELE in C:\Users\RAFFAELE\Desktop\esercitazione\gestione_attivita\gestione_attivita_main_service\gestore_attivita)
+2024-04-15T09:25:36.504+02:00  INFO 22076 --- [restartedMain] i.g.g.GestoreAttivitaApplication         : The following 1 profile is active: "docker"
+2024-04-15T09:25:36.557+02:00  INFO 22076 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-04-15T09:25:37.441+02:00  INFO 22076 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-15T09:25:37.488+02:00  INFO 22076 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47 ms. Found 1 JPA repository interface.
+2024-04-15T09:25:38.256+02:00  INFO 22076 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-04-15T09:25:38.287+02:00  INFO 22076 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-04-15T09:25:38.287+02:00  INFO 22076 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-15T09:25:38.350+02:00  INFO 22076 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-04-15T09:25:38.350+02:00  INFO 22076 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1793 ms
+2024-04-15T09:25:38.350+02:00 TRACE 22076 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Added existing Servlet initializer bean 'dispatcherServletRegistration'; order=2147483647, resource=class path resource [org/springframework/boot/autoconfigure/web/servlet/DispatcherServletAutoConfiguration$DispatcherServletRegistrationConfiguration.class]
+2024-04-15T09:25:38.366+02:00 TRACE 22076 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Created Filter initializer for bean 'characterEncodingFilter'; order=-2147483648, resource=class path resource [org/springframework/boot/autoconfigure/web/servlet/HttpEncodingAutoConfiguration.class]
+2024-04-15T09:25:38.366+02:00 TRACE 22076 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Created Filter initializer for bean 'formContentFilter'; order=-9900, resource=class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration.class]
+2024-04-15T09:25:38.366+02:00 TRACE 22076 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Created Filter initializer for bean 'requestContextFilter'; order=-105, resource=class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]
+2024-04-15T09:25:38.366+02:00 DEBUG 22076 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
+2024-04-15T09:25:38.366+02:00 DEBUG 22076 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: dispatcherServlet urls=[/]
+2024-04-15T09:25:38.500+02:00  INFO 22076 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-15T09:25:38.683+02:00  INFO 22076 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6ca46dd7
+2024-04-15T09:25:38.686+02:00  INFO 22076 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-15T09:25:38.724+02:00  INFO 22076 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-15T09:25:38.795+02:00  INFO 22076 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-15T09:25:38.842+02:00  INFO 22076 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-15T09:25:39.152+02:00  INFO 22076 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-15T09:25:39.225+02:00  WARN 22076 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-15T09:25:39.890+02:00  INFO 22076 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-15T09:25:39.963+02:00  INFO 22076 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-15T09:25:40.335+02:00  INFO 22076 --- [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-04-15T09:25:40.687+02:00  INFO 22076 --- [restartedMain] i.g.g.kafka.config.KafkaTopicConfig      : Nome topic kafka: gestoreAtt
+2024-04-15T09:25:40.836+02:00  WARN 22076 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-15T09:25:40.914+02:00 TRACE 22076 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
 	i.g.g.r.a.AttivitaController:
-	{GET [/v1/attivita-api/attivita/verifica/{idAttivita}]}: checkLavorabilitaAttivita(Long)
-	{POST [/v1/attivita-api/insert/]}: insertAttivita(InsertAttivitaRequestDto)
-	{PUT [/v1/attivita-api/attivita/lavora/{idAttivita}]}: lavoraAttivita(Long)
-	{GET [/v1/attivita-api/all-attivita/]}: attivitaList()
 	{GET [/v1/attivita-api/attivita/{id}]}: getAttivitaById(Long)
-2024-04-05T12:44:53.368+02:00 TRACE 29392 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	{POST [/v1/attivita-api/insert/]}: insertAttivita(InsertAttivitaRequestDto)
+	{GET [/v1/attivita-api/all-attivita/]}: attivitaList()
+	{PUT [/v1/attivita-api/attivita/lavora/{idAttivita}]}: lavoraAttivita(Long)
+	{GET [/v1/attivita-api/attivita/verifica/{idAttivita}]}: checkLavorabilitaAttivita(Long)
+2024-04-15T09:25:40.930+02:00 TRACE 22076 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
 	o.s.b.a.w.s.e.BasicErrorController:
 	{ [/error]}: error(HttpServletRequest)
 	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
-2024-04-05T12:44:53.395+02:00 TRACE 29392 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
-	o.s.w.a.OpenApiWebMvcResource:
-	{GET [/v3/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
-	{GET [/v3/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)
-2024-04-05T12:44:53.398+02:00 TRACE 29392 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
-	o.s.w.u.SwaggerWelcomeWebMvc:
-	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)
-2024-04-05T12:44:53.401+02:00 TRACE 29392 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
-	o.s.w.u.SwaggerConfigResource:
-	{GET [/v3/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)
-2024-04-05T12:44:53.408+02:00 DEBUG 29392 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 11 mappings in 'requestMappingHandlerMapping'
-2024-04-05T12:44:53.440+02:00 DEBUG 29392 --- [restartedMain] o.s.w.s.h.BeanNameUrlHandlerMapping      : Detected 0 mappings in 'beanNameHandlerMapping'
-2024-04-05T12:44:53.589+02:00 TRACE 29392 --- [restartedMain] o.s.w.s.f.support.RouterFunctionMapping  : 0 RouterFunction(s) in 'routerFunctionMapping'
-2024-04-05T12:44:53.613+02:00 TRACE 29392 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/webjars/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
-2024-04-05T12:44:53.614+02:00 TRACE 29392 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
-2024-04-05T12:44:53.616+02:00 TRACE 29392 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/swagger-ui*/*swagger-initializer.js] onto ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
-2024-04-05T12:44:53.616+02:00 TRACE 29392 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/swagger-ui*/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
-2024-04-05T12:44:53.617+02:00 DEBUG 29392 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
-2024-04-05T12:44:53.773+02:00 DEBUG 29392 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2024-04-05T12:44:53.847+02:00 DEBUG 29392 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2024-04-05T12:44:54.482+02:00  INFO 29392 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2024-04-05T12:44:54.540+02:00  INFO 29392 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
-2024-04-05T12:44:54.556+02:00  INFO 29392 --- [restartedMain] i.g.g.GestoreAttivitaApplication         : Started GestoreAttivitaApplication in 10.185 seconds (process running for 11.757)
-2024-04-05T13:20:31.661+02:00  WARN 29392 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=35m12s53ms494µs400ns).
-2024-04-05T13:23:54.185+02:00  WARN 29392 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m52s558ms632µs700ns).
-2024-04-05T13:56:39.897+02:00  WARN 29392 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=24m45s598ms986µs500ns).
-2024-04-05T14:22:42.291+02:00  WARN 29392 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m2s67ms296µs200ns).
-2024-04-05T14:23:35.615+02:00  INFO 29392 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-04-05T14:23:35.648+02:00  INFO 29392 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-04-05T14:23:35.654+02:00  INFO 29392 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-04-05T14:23:42.701+02:00  INFO 12504 --- [restartedMain] i.g.g.GestoreAttivitaApplication         : Starting GestoreAttivitaApplication using Java 20.0.1 with PID 12504 (C:\Users\hp\Desktop\ZERODD\Java\activity\gestore_attivita\gestione_attivita_main_service\gestore_attivita\target\classes started by hp in C:\Users\hp\Desktop\ZERODD\Java\activity\gestore_attivita\gestione_attivita_main_service\gestore_attivita)
-2024-04-05T14:23:42.704+02:00  INFO 12504 --- [restartedMain] i.g.g.GestoreAttivitaApplication         : The following 1 profile is active: "local"
-2024-04-05T14:23:42.801+02:00  INFO 12504 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-04-05T14:23:44.451+02:00  INFO 12504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-04-05T14:23:44.555+02:00  INFO 12504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 93 ms. Found 1 JPA repository interface.
-2024-04-05T14:23:46.402+02:00  INFO 12504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-04-05T14:23:46.431+02:00  INFO 12504 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-04-05T14:23:46.431+02:00  INFO 12504 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
-2024-04-05T14:23:46.520+02:00  INFO 12504 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-04-05T14:23:46.521+02:00  INFO 12504 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3718 ms
-2024-04-05T14:23:46.579+02:00  INFO 12504 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-04-05T14:23:47.050+02:00  INFO 12504 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:C:/Users/hp/Desktop/ZERODD/Java/activity/gestore_attivita/gestione_attivita_main_service/gestore_attivita/H2db user=YOUR_USERNAME
-2024-04-05T14:23:47.053+02:00  INFO 12504 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-04-05T14:23:47.071+02:00  INFO 12504 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:C:/Users/hp/Desktop/ZERODD/Java/activity/gestore_attivita/gestione_attivita_main_service/gestore_attivita/H2db'
-2024-04-05T14:23:47.083+02:00 TRACE 12504 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Added existing Servlet initializer bean 'dispatcherServletRegistration'; order=2147483647, resource=class path resource [org/springframework/boot/autoconfigure/web/servlet/DispatcherServletAutoConfiguration$DispatcherServletRegistrationConfiguration.class]
-2024-04-05T14:23:47.083+02:00 TRACE 12504 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Added existing Servlet initializer bean 'h2Console'; order=2147483647, resource=class path resource [org/springframework/boot/autoconfigure/h2/H2ConsoleAutoConfiguration.class]
-2024-04-05T14:23:47.106+02:00 TRACE 12504 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Created Filter initializer for bean 'characterEncodingFilter'; order=-2147483648, resource=class path resource [org/springframework/boot/autoconfigure/web/servlet/HttpEncodingAutoConfiguration.class]
-2024-04-05T14:23:47.106+02:00 TRACE 12504 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Created Filter initializer for bean 'formContentFilter'; order=-9900, resource=class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration.class]
-2024-04-05T14:23:47.106+02:00 TRACE 12504 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Created Filter initializer for bean 'requestContextFilter'; order=-105, resource=class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]
-2024-04-05T14:23:47.111+02:00 DEBUG 12504 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
-2024-04-05T14:23:47.112+02:00 DEBUG 12504 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: dispatcherServlet urls=[/], h2Console urls=[/h2-console/*]
-2024-04-05T14:23:47.329+02:00  INFO 12504 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-04-05T14:23:47.450+02:00  INFO 12504 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
-2024-04-05T14:23:47.521+02:00  INFO 12504 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-04-05T14:23:47.914+02:00  INFO 12504 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-04-05T14:23:49.370+02:00  INFO 12504 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-04-05T14:23:49.442+02:00  INFO 12504 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-04-05T14:23:50.079+02:00  INFO 12504 --- [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2024-04-05T14:23:50.879+02:00  INFO 12504 --- [restartedMain] i.g.g.kafka.config.KafkaTopicConfig      : Nome topic kafka: gestione_attivita_kafka
-2024-04-05T14:23:51.211+02:00  WARN 12504 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-04-05T14:23:51.491+02:00 TRACE 12504 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
-	i.g.g.r.a.AttivitaController:
-	{GET [/v1/attivita-api/attivita/verifica/{idAttivita}]}: checkLavorabilitaAttivita(Long)
-	{POST [/v1/attivita-api/insert/]}: insertAttivita(InsertAttivitaRequestDto)
-	{PUT [/v1/attivita-api/attivita/lavora/{idAttivita}]}: lavoraAttivita(Long)
-	{GET [/v1/attivita-api/attivita/{id}]}: getAttivitaById(Long)
-	{GET [/v1/attivita-api/all-attivita/]}: attivitaList()
-2024-04-05T14:23:51.514+02:00 TRACE 12504 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
-	o.s.b.a.w.s.e.BasicErrorController:
-	{ [/error]}: error(HttpServletRequest)
-	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
-2024-04-05T14:23:51.554+02:00 TRACE 12504 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+2024-04-15T09:25:40.945+02:00 TRACE 22076 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
 	o.s.w.a.OpenApiWebMvcResource:
 	{GET [/v3/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)
 	{GET [/v3/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
-2024-04-05T14:23:51.560+02:00 TRACE 12504 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+2024-04-15T09:25:40.945+02:00 TRACE 22076 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
 	o.s.w.u.SwaggerWelcomeWebMvc:
 	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)
-2024-04-05T14:23:51.564+02:00 TRACE 12504 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+2024-04-15T09:25:40.945+02:00 TRACE 22076 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
 	o.s.w.u.SwaggerConfigResource:
 	{GET [/v3/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)
-2024-04-05T14:23:51.574+02:00 DEBUG 12504 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 11 mappings in 'requestMappingHandlerMapping'
-2024-04-05T14:23:51.606+02:00 DEBUG 12504 --- [restartedMain] o.s.w.s.h.BeanNameUrlHandlerMapping      : Detected 0 mappings in 'beanNameHandlerMapping'
-2024-04-05T14:23:51.780+02:00 TRACE 12504 --- [restartedMain] o.s.w.s.f.support.RouterFunctionMapping  : 0 RouterFunction(s) in 'routerFunctionMapping'
-2024-04-05T14:23:51.817+02:00 TRACE 12504 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/webjars/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
-2024-04-05T14:23:51.817+02:00 TRACE 12504 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
-2024-04-05T14:23:51.818+02:00 TRACE 12504 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/swagger-ui*/*swagger-initializer.js] onto ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
-2024-04-05T14:23:51.818+02:00 TRACE 12504 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/swagger-ui*/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
-2024-04-05T14:23:51.819+02:00 DEBUG 12504 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
-2024-04-05T14:23:51.891+02:00 DEBUG 12504 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2024-04-05T14:23:51.948+02:00 DEBUG 12504 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2024-04-05T14:23:52.472+02:00  INFO 12504 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2024-04-05T14:23:52.521+02:00  INFO 12504 --- [restartedMain] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values: 
+2024-04-15T09:25:40.945+02:00 DEBUG 22076 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 11 mappings in 'requestMappingHandlerMapping'
+2024-04-15T09:25:40.961+02:00 DEBUG 22076 --- [restartedMain] o.s.w.s.h.BeanNameUrlHandlerMapping      : Detected 0 mappings in 'beanNameHandlerMapping'
+2024-04-15T09:25:41.024+02:00 TRACE 22076 --- [restartedMain] o.s.w.s.f.support.RouterFunctionMapping  : 0 RouterFunction(s) in 'routerFunctionMapping'
+2024-04-15T09:25:41.040+02:00 TRACE 22076 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/webjars/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2024-04-15T09:25:41.040+02:00 TRACE 22076 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-04-15T09:25:41.040+02:00 TRACE 22076 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/swagger-ui*/*swagger-initializer.js] onto ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2024-04-15T09:25:41.040+02:00 TRACE 22076 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/swagger-ui*/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2024-04-15T09:25:41.040+02:00 DEBUG 22076 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2024-04-15T09:25:41.071+02:00 DEBUG 22076 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-15T09:25:41.118+02:00 DEBUG 22076 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-15T09:25:41.353+02:00  INFO 22076 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-04-15T09:25:41.369+02:00  INFO 22076 --- [restartedMain] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values: 
 	auto.include.jmx.reporter = true
 	bootstrap.servers = [localhost:9092]
 	client.dns.lookup = use_all_dns_ips
@@ -201,204 +130,259 @@
 	ssl.truststore.password = null
 	ssl.truststore.type = JKS
 
-2024-04-05T14:23:52.818+02:00  INFO 12504 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.1
-2024-04-05T14:23:52.818+02:00  INFO 12504 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e3c2b738d253ff5
-2024-04-05T14:23:52.818+02:00  INFO 12504 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1712319832816
-2024-04-05T14:23:52.847+02:00  INFO 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:23:52.850+02:00  WARN 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:23:52.964+02:00  INFO 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:23:52.964+02:00  WARN 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:23:53.184+02:00  INFO 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:23:53.184+02:00  WARN 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:23:53.401+02:00  INFO 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:23:53.401+02:00  WARN 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:23:53.835+02:00  INFO 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:23:53.836+02:00  WARN 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:23:54.815+02:00  INFO 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:23:54.816+02:00  WARN 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:23:56.016+02:00  INFO 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:23:56.017+02:00  WARN 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:23:56.888+02:00  INFO 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:23:56.889+02:00  WARN 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:23:57.756+02:00  INFO 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:23:57.757+02:00  WARN 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:23:58.839+02:00  INFO 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:23:58.839+02:00  WARN 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:23:59.816+02:00  INFO 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:23:59.817+02:00  WARN 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:24:00.799+02:00  INFO 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:24:00.799+02:00  WARN 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:24:01.777+02:00  INFO 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:24:01.777+02:00  WARN 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:24:02.978+02:00  INFO 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:24:02.979+02:00  WARN 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:24:03.958+02:00  INFO 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:24:03.958+02:00  WARN 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:24:04.942+02:00  INFO 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:24:04.943+02:00  WARN 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:24:05.813+02:00  INFO 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:24:05.814+02:00  WARN 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:24:06.903+02:00  INFO 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:24:06.903+02:00  WARN 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:24:07.990+02:00  INFO 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:24:07.991+02:00  WARN 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:24:09.187+02:00  INFO 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:24:09.188+02:00  WARN 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:24:10.378+02:00  INFO 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:24:10.378+02:00  WARN 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:24:11.361+02:00  INFO 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:24:11.361+02:00  WARN 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:24:12.563+02:00  INFO 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:24:12.563+02:00  WARN 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:24:13.432+02:00  INFO 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:24:13.432+02:00  WARN 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:24:14.409+02:00  INFO 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:24:14.409+02:00  WARN 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:24:15.283+02:00  INFO 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:24:15.283+02:00  WARN 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:24:16.368+02:00  INFO 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:24:16.369+02:00  WARN 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:24:17.354+02:00  INFO 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:24:17.355+02:00  WARN 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:24:18.441+02:00  INFO 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:24:18.442+02:00  WARN 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:24:19.528+02:00  INFO 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:24:19.528+02:00  WARN 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:24:20.730+02:00  INFO 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:24:20.730+02:00  WARN 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:24:21.709+02:00  INFO 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:24:21.709+02:00  WARN 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:24:22.792+02:00  INFO 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:24:22.793+02:00  WARN 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:24:22.837+02:00  INFO 12504 --- [kafka-admin-client-thread | adminclient-1] o.a.k.c.a.i.AdminMetadataManager         : [AdminClient clientId=adminclient-1] Metadata update failed
+2024-04-15T09:25:41.548+02:00  INFO 22076 --- [restartedMain] o.a.k.clients.admin.AdminClientConfig    : These configurations '[schema.registry.url]' were supplied but are not used yet.
+2024-04-15T09:25:41.548+02:00  INFO 22076 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.1
+2024-04-15T09:25:41.548+02:00  INFO 22076 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e3c2b738d253ff5
+2024-04-15T09:25:41.548+02:00  INFO 22076 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1713165941548
+2024-04-15T09:25:41.907+02:00  INFO 22076 --- [kafka-admin-client-thread | adminclient-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for adminclient-1 unregistered
+2024-04-15T09:25:41.911+02:00  INFO 22076 --- [kafka-admin-client-thread | adminclient-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2024-04-15T09:25:41.911+02:00  INFO 22076 --- [kafka-admin-client-thread | adminclient-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-04-15T09:25:41.911+02:00  INFO 22076 --- [kafka-admin-client-thread | adminclient-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2024-04-15T09:25:41.920+02:00  INFO 22076 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-04-15T09:25:41.920+02:00  INFO 22076 --- [restartedMain] i.g.g.GestoreAttivitaApplication         : Started GestoreAttivitaApplication in 5.894 seconds (process running for 6.927)
+2024-04-15T09:26:00.349+02:00  INFO 22076 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-15T09:26:00.349+02:00  INFO 22076 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-04-15T09:26:00.349+02:00 TRACE 22076 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.multipart.support.StandardServletMultipartResolver@40ad810
+2024-04-15T09:26:00.349+02:00 TRACE 22076 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver@59b8ba6c
+2024-04-15T09:26:00.350+02:00 TRACE 22076 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.theme.FixedThemeResolver@71eaaf47
+2024-04-15T09:26:00.351+02:00 TRACE 22076 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected DefaultRequestToViewNameTranslator
+2024-04-15T09:26:00.351+02:00 TRACE 22076 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected SessionFlashMapManager
+2024-04-15T09:26:00.352+02:00 DEBUG 22076 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-04-15T09:26:00.352+02:00  INFO 22076 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-04-15T09:26:00.365+02:00 TRACE 22076 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/index.html", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2024-04-15T09:26:00.374+02:00 TRACE 22076 --- [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns [/swagger-ui*/**, /**]
+2024-04-15T09:26:00.377+02:00 TRACE 22076 --- [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to HandlerExecutionChain with [ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]] and 4 interceptors
+2024-04-15T09:26:00.401+02:00 TRACE 22076 --- [http-nio-8080-exec-1] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not modified
+2024-04-15T09:26:00.401+02:00 TRACE 22076 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2024-04-15T09:26:00.402+02:00 DEBUG 22076 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 304 NOT_MODIFIED, headers={masked}
+2024-04-15T09:26:00.420+02:00 TRACE 22076 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/swagger-initializer.js", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2024-04-15T09:26:00.421+02:00 TRACE 22076 --- [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns [/swagger-ui*/*swagger-initializer.js, /swagger-ui*/**, /**]
+2024-04-15T09:26:00.421+02:00 TRACE 22076 --- [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to HandlerExecutionChain with [ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]] and 4 interceptors
+2024-04-15T09:26:00.447+02:00 TRACE 22076 --- [http-nio-8080-exec-2] o.s.w.s.r.ResourceHttpRequestHandler     : Applying default cacheSeconds=0
+2024-04-15T09:26:00.456+02:00 TRACE 22076 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2024-04-15T09:26:00.456+02:00 DEBUG 22076 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK, headers={masked}
+2024-04-15T09:26:00.665+02:00 TRACE 22076 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/v3/api-docs/swagger-config", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2024-04-15T09:26:00.667+02:00 TRACE 22076 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springdoc.webmvc.ui.SwaggerConfigResource#openapiJson(HttpServletRequest)
+2024-04-15T09:26:00.676+02:00 TRACE 22076 --- [http-nio-8080-exec-3] o.s.web.method.HandlerMethod             : Arguments: [org.apache.catalina.connector.RequestFacade@718815ab]
+2024-04-15T09:26:00.679+02:00 DEBUG 22076 --- [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json]
+2024-04-15T09:26:00.680+02:00 TRACE 22076 --- [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Writing [{configUrl=/v3/api-docs/swagger-config, oauth2RedirectUrl=http://localhost:8080/swagger-ui/oauth2-redirect.html, url=/v3/api-docs, validatorUrl=}]
+2024-04-15T09:26:00.687+02:00 TRACE 22076 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2024-04-15T09:26:00.687+02:00 TRACE 22076 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2024-04-15T09:26:00.688+02:00 DEBUG 22076 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK, headers={masked}
+2024-04-15T09:26:00.706+02:00 TRACE 22076 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/v3/api-docs", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2024-04-15T09:26:00.707+02:00 TRACE 22076 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springdoc.webmvc.api.OpenApiWebMvcResource#openapiJson(HttpServletRequest, String, Locale)
+2024-04-15T09:26:00.717+02:00 TRACE 22076 --- [http-nio-8080-exec-4] o.s.web.method.HandlerMethod             : Arguments: [org.apache.catalina.connector.RequestFacade@6b7c939a, /v3/api-docs, it_IT]
+2024-04-15T09:26:01.048+02:00  INFO 22076 --- [http-nio-8080-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 330 ms
+2024-04-15T09:26:01.073+02:00 DEBUG 22076 --- [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, */*] and supported [application/json]
+2024-04-15T09:26:01.088+02:00 TRACE 22076 --- [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Writing [{123, 34, 111, 112, 101, 110, 97, 112, 105, 34, 58, 34, 51, 46, 48, 46, 49, 34, 44, 34, 105, 110, 102, 111, 34, 58, 123, 34, 116, 105, 116, 108, 101, 34, 58, 34, 79, 112, 101, 110, 65, 80, 73, 32, 100, 101, 102, 105, 110, 105, 116, 105, 111, 110, 34, 44, 34, 118, 101, 114, 115, 105, 111, 110, 34, 58, 34, 118, 48, 34, 125, 44, 34, 115, 101, 114, 118, 101, 114, 115, 34, 58, 91, 123, 34, 117, 114, 108, 34, 58, 34, 104, 116, 116, 112, 58, 47, 47, 108, 111, 99, 97, 108, 104, 111, 115, 116, 58, 56, 48, 56, 48, 34, 44, 34, 100, 101, 115, 99, 114, 105, 112, 116, 105, 111, 110, 34, 58, 34, 71, 101, 110, 101, 114, 97, 116, 101, 100, 32, 115, 101, 114, 118, 101, 114, 32, 117, 114, 108, 34, 125, 93, 44, 34, 112, 97, 116, 104, 115, 34, 58, 123, 34, 47, 118, 49, 47, 97, 116, 116, 105, 118, 105, 116, 97, 45, 97, 112, 105, 47, 97, 116, 116, 105, 118, 105, 116, 97, 47, 108, 97, 118, 111, 114, 97, 47, 123, 105, 100, 65, 116, 116, 105, 118, 105, 116, 97, 125, 34, 58, 123, 34, 112, 117, 116, 34, 58, 123, 34, 116, 97, 103, 115, 34, 58, 91, 34, 65, 116, 116, 105, 118, 105, 116, -61, -96, 34, 93, 44, 34, 115, 117, 109, 109, 97, 114, 121, 34, 58, 34, 118, 101, 114, 105, 102, 105, 99, 97, 32, 115, 101, 32, 117, 110, 39, 32, 65, 116, 116, 105, 118, 105, 116, 97, 32, -61, -88, 32, 108, 97, 118, 111, 114, 97, 98, 105, 108, 101, 32, 111, 112, 112, 117, 114, 101, 32, 110, 111, 34, 44, 34, 111, 112, 101, 114, 97, 116, 105, 111, 110, 73, 100, 34, 58, 34, 108, 97, 118, 111, 114, 97, 65, 116, 116, 105, 118, 105, 116, 97, 34, 44, 34, 112, 97, 114, 97, 109, 101, 116, 101, 114, 115, 34, 58, 91, 123, 34, 110, 97, 109, 101, 34, 58, 34, 105, 100, 65, 116, 116, 105, 118, 105, 116, 97, 34, 44, 34, 105, 110, 34, 58, 34, 112, 97, 116, 104, 34, 44, 34, 114, 101, 113, 117, 105, 114, 101, 100, 34, 58, 116, 114, 117, 101, 44, 34, 115, 99, 104, 101, 109, 97, 34, 58, 123, 34, 116, 121, 112, 101, 34, 58, 34, 105, 110, 116, 101, 103, 101, 114, 34, 44, 34, 102, 111, 114, 109, 97, 116, 34, 58, 34, 105, 110, 116, 54, 52, 34, 125, 125, 93, 44, 34, 114, 101, 115, 112, 111, 110, 115, 101, 115, 34, 58, 123, 34, 52, 48, 48, 34, 58, 123, 34, 100, 101, 115, 99, 114, 105, 112, 116, 105, 111, 110, 34, 58, 34, 66, 97, 100, 32, 82, 101, 113, 117, 101, 115, 116, 33, 34, 44, 34, 99, 111, 110, 116, 101, 110, 116, 34, 58, 123, 34, 42, 47, 42, 34, 58, 123, 34, 115, 99, 104, 101, 109, 97, 34, 58, 123, 34, 36, 114, 101, 102, 34, 58, 34, 35, 47, 99, 111, 109, 112, 111, 110, 101, 110, 116, 115, 47, 115, 99, 104, 101, 109, 97, 115, 47, 76, 97, 118, 111, 114, 97, 65, 116, 116, 105, 118, 105, 116, 97, 68, 116, 111, 34, 125, 125, 125, 125, 44, 34, 50, 48, 48, 34, 58, 123, 34, 100, 101, 115, 99, 114, 105, 112, 116, 105, 111, 110, 34, 58, 34, 118, 101, 114, 105, 102, 105, 99, 97, 32, 115, 101, 32, 117, 110, 39, 32, 65, 116, 116, 105, 118, 105, 116, 97, 32, -61, -88, 32, 108, 97, 118, 111, 114, 97, 98, 105, 108, 101, 32, 111, 112, 112, 117, 114, 101, 32, 110, 111, 44, 32, 118, 101, 114, 105, 102, 111, 99, 97, 110, 100, 111, 32, 99, 104, 101, 32, 108, 101, 32, 115, 117, 101, 32, 97, 116, 116, 105, 118, 105, 116, -61, -96, 32, 112, 97, 100, 114, 101, 32, 115, 105, 97, 110, 111, 32, 108, 97, 118, 111, 114, 97, 98, 105, 108, 105, 34, 44, 34, 99, 111, 110, 116, 101, 110, 116, 34, 58, 123, 34, 97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110, 34, 58, 123, 125, 125, 125, 44, 34, 52, 48, 52, 34, 58, 123, 34, 100, 101, 115, 99, 114, 105, 112, 116, 105, 111, 110, 34, 58, 34, 65, 116, 116, 105, 118, 105, 116, -61, -96, 32, 110, 111, 110, 32, 116, 114, 111, 118, 97, 116, 97, 33, 34, 44, 34, 99, 111, 110, 116, 101, 110, 116, 34, 58, 123, 34, 42, 47, 42, 34, 58, 123, 34, 115, 99, 104, 101, 109, 97, 34, 58, 123, 34, 36, 114, 101, 102, 34, 58, 34, 35, 47, 99, 111, 109, 112, 111, 110, 101, 110, 116, 115, 47, 115, 99, 104, 101, 109, 97, 115, 47, 76, 97, 118, 111, 114, 97, 65, 116, 116, 105, 118, 105, 116, 97, 68, 116, 111, 34, 125, 125, 125, 125, 125, 125, 125, 44, 34, 47, 118, 49, 47, 97, 116, 116, 105, 118, 105, 116, 97, 45, 97, 112, 105, 47, 105, 110, 115, 101, 114, 116, 47, 34, 58, 123, 34, 112, 111, 115, 116, 34, 58, 123, 34, 116, 97, 103, 115, 34, 58, 91, 34, 65, 116, 116, 105, 118, 105, 116, -61, -96, 34, 93, 44, 34, 115, 117, 109, 109, 97, 114, 121, 34, 58, 34, 105, 110, 115, 101, 114, 116, 32, 65, 116, 116, 105, 118, 105, 116, 97, 32, 101, 110, 116, 105, 116, 121, 32, 105, 110, 116, 111, 32, 100, 97, 116, 97, 98, 97, 115, 101, 34, 44, 34, 111, 112, 101, 114, 97, 116, 105, 111, 110, 73, 100, 34, 58, 34, 105, 110, 115, 101, 114, 116, 65, 116, 116, 105, 118, 105, 116, 97, 34, 44, 34, 114, 101, 113, 117, 101, 115, 116, 66, 111, 100, 121, 34, 58, 123, 34, 99, 111, 110, 116, 101, 110, 116, 34, 58, 123, 34, 97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110, 34, 58, 123, 34, 115, 99, 104, 101, 109, 97, 34, 58, 123, 34, 36, 114, 101, 102, 34, 58, 34, 35, 47, 99, 111, 109, 112, 111, 110, 101, 110, 116, 115, 47, 115, 99, 104, 101, 109, 97, 115, 47, 73, 110, 115, 101, 114, 116, 65, 116, 116, 105, 118, 105, 116, 97, 82, 101, 113, 117, 101, 115, 116, 68, 116, 111, 34, 125, 125, 125, 44, 34, 114, 101, 113, 117, 105, 114, 101, 100, 34, 58, 116, 114, 117, 101, 125, 44, 34, 114, 101, 115, 112, 111, 110, 115, 101, 115, 34, 58, 123, 34, 52, 48, 48, 34, 58, 123, 34, 100, 101, 115, 99, 114, 105, 112, 116, 105, 111, 110, 34, 58, 34, 66, 97, 100, 32, 82, 101, 113, 117, 101, 115, 116, 33, 34, 44, 34, 99, 111, 110, 116, 101, 110, 116, 34, 58, 123, 34, 42, 47, 42, 34, 58, 123, 34, 115, 99, 104, 101, 109, 97, 34, 58, 123, 34, 36, 114, 101, 102, 34, 58, 34, 35, 47, 99, 111, 109, 112, 111, 110, 101, 110, 116, 115, 47, 115, 99, 104, 101, 109, 97, 115, 47, 65, 116, 116, 105, 118, 105, 116, 97, 82, 101, 115, 112, 111, 110, 115, 101, 68, 116, 111, 34, 125, 125, 125, 125, 44, 34, 50, 48, 48, 34, 58, 123, 34, 100, 101, 115, 99, 114, 105, 112, 116, 105, 111, 110, 34, 58, 34, 65, 116, 116, 105, 118, 105, 116, 97, 32, 101, 110, 116, 105, 116, 121, 32, 115, 116, 111, 114, 101, 100, 34, 44, 34, 99, 111, 110, 116, 101, 110, 116, 34, 58, 123, 34, 97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110, 34, 58, 123, 125, 125, 125, 125, 125, 125, 44, 34, 47, 118, 49, 47, 97, 116, 116, 105, 118, 105, 116, 97, 45, 97, 112, 105, 47, 97, 116, 116, 105, 118, 105, 116, 97, 47, 123, 105, 100, 125, 34, 58, 123, 34, 103, 101, 116, 34, 58, 123, 34, 116, 97, 103, 115, 34, 58, 91, 34, 65, 116, 116, 105, 118, 105, 116, -61, -96, 34, 93, 44, 34, 115, 117, 109, 109, 97, 114, 121, 34, 58, 34, 103, 101, 116, 32, 65, 116, 116, 105, 118, 105, 116, 97, 32, 98, 121, 32, 105, 116, 39, 115, 32, 73, 68, 34, 44, 34, 111, 112, 101, 114, 97, 116, 105, 111, 110, 73, 100, 34, 58, 34, 103, 101, 116, 65, 116, 116, 105, 118, 105, 116, 97, 66, 121, 73, 100, 34, 44, 34, 112, 97, 114, 97, 109, 101, 116, 101, 114, 115, 34, 58, 91, 123, 34, 110, 97, 109, 101, 34, 58, 34, 105, 100, 34, 44, 34, 105, 110, 34, 58, 34, 112, 97, 116, 104, 34, 44, 34, 114, 101, 113, 117, 105, 114, 101, 100, 34, 58, 116, 114, 117, 101, 44, 34, 115, 99, 104, 101, 109, 97, 34, 58, 123, 34, 116, 121, 112, 101, 34, 58, 34, 105, 110, 116, 101, 103, 101, 114, 34, 44, 34, 102, 111, 114, 109, 97, 116, 34, 58, 34, 105, 110, 116, 54, 52, 34, 125, 125, 93, 44, 34, 114, 101, 115, 112, 111, 110, 115, 101, 115, 34, 58, 123, 34, 52, 48, 48, 34, 58, 123, 34, 100, 101, 115, 99, 114, 105, 112, 116, 105, 111, 110, 34, 58, 34, 66, 97, 100, 32, 82, 101, 113, 117, 101, 115, 116, 33, 34, 44, 34, 99, 111, 110, 116, 101, 110, 116, 34, 58, 123, 34, 42, 47, 42, 34, 58, 123, 34, 115, 99, 104, 101, 109, 97, 34, 58, 123, 34, 36, 114, 101, 102, 34, 58, 34, 35, 47, 99, 111, 109, 112, 111, 110, 101, 110, 116, 115, 47, 115, 99, 104, 101, 109, 97, 115, 47, 65, 116, 116, 105, 118, 105, 116, 97, 82, 101, 115, 112, 111, 110, 115, 101, 68, 116, 111, 34, 125, 125, 125, 125, 44, 34, 50, 48, 48, 34, 58, 123, 34, 100, 101, 115, 99, 114, 105, 112, 116, 105, 111, 110, 34, 58, 34, 103, 101, 116, 32, 65, 116, 116, 105, 118, 105, 116, 97, 32, 101, 110, 116, 105, 116, 121, 32, 98, 121, 32, 73, 68, 34, 44, 34, 99, 111, 110, 116, 101, 110, 116, 34, 58, 123, 34, 97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110, 34, 58, 123, 125, 125, 125, 44, 34, 52, 48, 52, 34, 58, 123, 34, 100, 101, 115, 99, 114, 105, 112, 116, 105, 111, 110, 34, 58, 34, 65, 116, 116, 105, 118, 105, 116, -61, -96, 32, 110, 111, 110, 32, 116, 114, 111, 118, 97, 116, 97, 33, 34, 44, 34, 99, 111, 110, 116, 101, 110, 116, 34, 58, 123, 34, 42, 47, 42, 34, 58, 123, 34, 115, 99, 104, 101, 109, 97, 34, 58, 123, 34, 36, 114, 101, 102, 34, 58, 34, 35, 47, 99, 111, 109, 112, 111, 110, 101, 110, 116, 115, 47, 115, 99, 104, 101, 109, 97, 115, 47, 65, 116, 116, 105, 118, 105, 116, 97, 82, 101, 115, 112, 111, 110, 115, 101, 68, 116, 111, 34, 125, 125, 125, 125, 125, 125, 125, 44, 34, 47, 118, 49, 47, 97, 116, 116, 105, 118, 105, 116, 97, 45, 97, 112, 105, 47, 97, 116, 116, 105, 118, 105, 116, 97, 47, 118, 101, 114, 105, 102, 105, 99, 97, 47, 123, 105, 100, 65, 116, 116, 105, 118, 105, 116, 97, 125, 34, 58, 123, 34, 103, 101, 116, 34, 58, 123, 34, 116, 97, 103, 115, 34, 58, 91, 34, 65, 116, 116, 105, 118, 105, 116, -61, -96, 34, 93, 44, 34, 115, 117, 109, 109, 97, 114, 121, 34, 58, 34, 118, 101, 114, 105, 102, 105, 99, 97, 32, 115, 101, 32, 117, 110, 39, 32, 65, 116, 116, 105, 118, 105, 116, 97, 32, -61, -88, 32, 108, 97, 118, 111, 114, 97, 98, 105, 108, 101, 32, 111, 112, 112, 117, 114, 101, 32, 110, 111, 34, 44, 34, 111, 112, 101, 114, 97, 116, 105, 111, 110, 73, 100, 34, 58, 34, 99, 104, 101, 99, 107, 76, 97, 118, 111, 114, 97, 98, 105, 108, 105, 116, 97, 65, 116, 116, 105, 118, 105, 116, 97, 34, 44, 34, 112, 97, 114, 97, 109, 101, 116, 101, 114, 115, 34, 58, 91, 123, 34, 110, 97, 109, 101, 34, 58, 34, 105, 100, 65, 116, 116, 105, 118, 105, 116, 97, 34, 44, 34, 105, 110, 34, 58, 34, 112, 97, 116, 104, 34, 44, 34, 114, 101, 113, 117, 105, 114, 101, 100, 34, 58, 116, 114, 117, 101, 44, 34, 115, 99, 104, 101, 109, 97, 34, 58, 123, 34, 116, 121, 112, 101, 34, 58, 34, 105, 110, 116, 101, 103, 101, 114, 34, 44, 34, 102, 111, 114, 109, 97, 116, 34, 58, 34, 105, 110, 116, 54, 52, 34, 125, 125, 93, 44, 34, 114, 101, 115, 112, 111, 110, 115, 101, 115, 34, 58, 123, 34, 52, 48, 48, 34, 58, 123, 34, 100, 101, 115, 99, 114, 105, 112, 116, 105, 111, 110, 34, 58, 34, 66, 97, 100, 32, 82, 101, 113, 117, 101, 115, 116, 33, 34, 44, 34, 99, 111, 110, 116, 101, 110, 116, 34, 58, 123, 34, 42, 47, 42, 34, 58, 123, 34, 115, 99, 104, 101, 109, 97, 34, 58, 123, 34, 36, 114, 101, 102, 34, 58, 34, 35, 47, 99, 111, 109, 112, 111, 110, 101, 110, 116, 115, 47, 115, 99, 104, 101, 109, 97, 115, 47, 86, 101, 114, 105, 102, 105, 99, 97, 65, 116, 116, 105, 118, 105, 116, 97, 68, 116, 111, 34, 125, 125, 125, 125, 44, 34, 50, 48, 48, 34, 58, 123, 34, 100, 101, 115, 99, 114, 105, 112, 116, 105, 111, 110, 34, 58, 34, 118, 101, 114, 105, 102, 105, 99, 97, 32, 115, 101, 32, 117, 110, 39, 32, 65, 116, 116, 105, 118, 105, 116, 97, 32, -61, -88, 32, 108, 97, 118, 111, 114, 97, 98, 105, 108, 101, 32, 111, 112, 112, 117, 114, 101, 32, 110, 111, 44, 32, 118, 101, 114, 105, 102, 111, 99, 97, 110, 100, 111, 32, 99, 104, 101, 32, 108, 101, 32, 115, 117, 101, 32, 97, 116, 116, 105, 118, 105, 116, -61, -96, 32, 112, 97, 100, 114, 101, 32, 115, 105, 97, 110, 111, 32, 108, 97, 118, 111, 114, 97, 98, 105, 108, 105, 34, 44, 34, 99, 111, 110, 116, 101, 110, 116, 34, 58, 123, 34, 97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110, 34, 58, 123, 125, 125, 125, 44, 34, 52, 48, 52, 34, 58, 123, 34, 100, 101, 115, 99, 114, 105, 112, 116, 105, 111, 110, 34, 58, 34, 65, 116, 116, 105, 118, 105, 116, -61, -96, 32, 110, 111, 110, 32, 116, 114, 111, 118, 97, 116, 97, 33, 34, 44, 34, 99, 111, 110, 116, 101, 110, 116, 34, 58, 123, 34, 42, 47, 42, 34, 58, 123, 34, 115, 99, 104, 101, 109, 97, 34, 58, 123, 34, 36, 114, 101, 102, 34, 58, 34, 35, 47, 99, 111, 109, 112, 111, 110, 101, 110, 116, 115, 47, 115, 99, 104, 101, 109, 97, 115, 47, 86, 101, 114, 105, 102, 105, 99, 97, 65, 116, 116, 105, 118, 105, 116, 97, 68, 116, 111, 34, 125, 125, 125, 125, 125, 125, 125, 44, 34, 47, 118, 49, 47, 97, 116, 116, 105, 118, 105, 116, 97, 45, 97, 112, 105, 47, 97, 108, 108, 45, 97, 116, 116, 105, 118, 105, 116, 97, 47, 34, 58, 123, 34, 103, 101, 116, 34, 58, 123, 34, 116, 97, 103, 115, 34, 58, 91, 34, 65, 116, 116, 105, 118, 105, 116, -61, -96, 34, 93, 44, 34, 115, 117, 109, 109, 97, 114, 121, 34, 58, 34, 114, 101, 116, 117, 114, 110, 115, 32, 97, 108, 108, 32, 65, 116, 116, 105, 118, 105, 116, 97, 32, 101, 110, 116, 105, 116, 105, 101, 115, 32, 115, 116, 111, 114, 101, 100, 32, 105, 110, 116, 111, 32, 100, 97, 116, 97, 98, 97, 115, 101, 34, 44, 34, 111, 112, 101, 114, 97, 116, 105, 111, 110, 73, 100, 34, 58, 34, 97, 116, 116, 105, 118, 105, 116, 97, 76, 105, 115, 116, 34, 44, 34, 114, 101, 115, 112, 111, 110, 115, 101, 115, 34, 58, 123, 34, 50, 48, 48, 34, 58, 123, 34, 100, 101, 115, 99, 114, 105, 112, 116, 105, 111, 110, 34, 58, 34, 79, 116, 116, 105, 101, 110, 105, 32, 108, 97, 32, 108, 105, 115, 116, 97, 32, 100, 105, 32, 65, 116, 116, 105, 118, 105, 116, -61, -96, 34, 44, 34, 99, 111, 110, 116, 101, 110, 116, 34, 58, 123, 34, 97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110, 34, 58, 123, 34, 115, 99, 104, 101, 109, 97, 34, 58, 123, 34, 36, 114, 101, 102, 34, 58, 34, 35, 47, 99, 111, 109, 112, 111, 110, 101, 110, 116, 115, 47, 115, 99, 104, 101, 109, 97, 115, 47, 65, 116, 116, 105, 118, 105, 116, 97, 77, 111, 100, 101, 108, 34, 125, 125, 125, 125, 44, 34, 52, 48, 48, 34, 58, 123, 34, 100, 101, 115, 99, 114, 105, 112, 116, 105, 111, 110, 34, 58, 34, 66, 97, 100, 32, 82, 101, 113, 117, 101, 115, 116, 33, 34, 44, 34, 99, 111, 110, 116, 101, 110, 116, 34, 58, 123, 34, 42, 47, 42, 34, 58, 123, 34, 115, 99, 104, 101, 109, 97, 34, 58, 123, 34, 116, 121, 112, 101, 34, 58, 34, 97, 114, 114, 97, 121, 34, 44, 34, 105, 116, 101, 109, 115, 34, 58, 123, 34, 36, 114, 101, 102, 34, 58, 34, 35, 47, 99, 111, 109, 112, 111, 110, 101, 110, 116, 115, 47, 115, 99, 104, 101, 109, 97, 115, 47, 65, 116, 116, 105, 118, 105, 116, 97, 82, 101, 115, 112, 111, 110, 115, 101, 68, 116, 111, 34, 125, 125, 125, 125, 125, 44, 34, 52, 48, 52, 34, 58, 123, 34, 100, 101, 115, 99, 114, 105, 112, 116, 105, 111, 110, 34, 58, 34, 78, 101, 115, 115, 117, 110, 97, 32, 97, 116, 116, 105, 118, 105, 116, -61, -96, 32, 99, 101, 110, 115, 105, 116, 97, 34, 44, 34, 99, 111, 110, 116, 101, 110, 116, 34, 58, 123, 34, 42, 47, 42, 34, 58, 123, 34, 115, 99, 104, 101, 109, 97, 34, 58, 123, 34, 116, 121, 112, 101, 34, 58, 34, 97, 114, 114, 97, 121, 34, 44, 34, 105, 116, 101, 109, 115, 34, 58, 123, 34, 36, 114, 101, 102, 34, 58, 34, 35, 47, 99, 111, 109, 112, 111, 110, 101, 110, 116, 115, 47, 115, 99, 104, 101, 109, 97, 115, 47, 65, 116, 116, 105, 118, 105, 116, 97, 82, 101, 115, 112, 111, 110, 115, 101, 68, 116, 111, 34, 125, 125, 125, 125, 125, 125, 125, 125, 125, 44, 34, 99, 111, 109, 112, 111, 110, 101, 110, 116, 115, 34, 58, 123, 34, 115, 99, 104, 101, 109, 97, 115, 34, 58, 123, 34, 76, 97, 118, 111, 114, 97, 65, 116, 116, 105, 118, 105, 116, 97, 68, 116, 111, 34, 58, 123, 34, 116, 121, 112, 101, 34, 58, 34, 111, 98, 106, 101, 99, 116, 34, 44, 34, 112, 114, 111, 112, 101, 114, 116, 105, 101, 115, 34, 58, 123, 34, 105, 100, 65, 116, 116, 105, 118, 105, 116, 97, 34, 58, 123, 34, 116, 121, 112, 101, 34, 58, 34, 105, 110, 116, 101, 103, 101, 114, 34, 44, 34, 102, 111, 114, 109, 97, 116, 34, 58, 34, 105, 110, 116, 54, 52, 34, 125, 44, 34, 108, 97, 118, 111, 114, 97, 116, 97, 34, 58, 123, 34, 116, 121, 112, 101, 34, 58, 34, 98, 111, 111, 108, 101, 97, 110, 34, 125, 44, 34, 109, 101, 115, 115, 97, 103, 101, 34, 58, 123, 34, 116, 121, 112, 101, 34, 58, 34, 115, 116, 114, 105, 110, 103, 34, 125, 125, 125, 44, 34, 73, 110, 115, 101, 114, 116, 65, 116, 116, 105, 118, 105, 116, 97, 82, 101, 113, 117, 101, 115, 116, 68, 116, 111, 34, 58, 123, 34, 116, 121, 112, 101, 34, 58, 34, 111, 98, 106, 101, 99, 116, 34, 44, 34, 112, 114, 111, 112, 101, 114, 116, 105, 101, 115, 34, 58, 123, 34, 97, 108, 105, 97, 115, 34, 58, 123, 34, 116, 121, 112, 101, 34, 58, 34, 115, 116, 114, 105, 110, 103, 34, 125, 44, 34, 108, 97, 118, 111, 114, 97, 116, 97, 34, 58, 123, 34, 116, 121, 112, 101, 34, 58, 34, 115, 116, 114, 105, 110, 103, 34, 125, 44, 34, 97, 116, 116, 105, 118, 105, 116, 97, 80, 97, 100, 114, 101, 34, 58, 123, 34, 116, 121, 112, 101, 34, 58, 34, 105, 110, 116, 101, 103, 101, 114, 34, 44, 34, 102, 111, 114, 109, 97, 116, 34, 58, 34, 105, 110, 116, 54, 52, 34, 125, 125, 125, 44, 34, 65, 116, 116, 105, 118, 105, 116, 97, 82, 101, 115, 112, 111, 110, 115, 101, 68, 116, 111, 34, 58, 123, 34, 116, 121, 112, 101, 34, 58, 34, 111, 98, 106, 101, 99, 116, 34, 44, 34, 112, 114, 111, 112, 101, 114, 116, 105, 101, 115, 34, 58, 123, 34, 105, 100, 34, 58, 123, 34, 116, 121, 112, 101, 34, 58, 34, 105, 110, 116, 101, 103, 101, 114, 34, 44, 34, 102, 111, 114, 109, 97, 116, 34, 58, 34, 105, 110, 116, 54, 52, 34, 125, 44, 34, 97, 108, 105, 97, 115, 34, 58, 123, 34, 116, 121, 112, 101, 34, 58, 34, 115, 116, 114, 105, 110, 103, 34, 125, 44, 34, 108, 97, 118, 111, 114, 97, 116, 97, 34, 58, 123, 34, 116, 121, 112, 101, 34, 58, 34, 98, 111, 111, 108, 101, 97, 110, 34, 125, 44, 34, 97, 116, 116, 105, 118, 105, 116, 97, 80, 97, 100, 114, 101, 34, 58, 123, 34, 116, 121, 112, 101, 34, 58, 34, 105, 110, 116, 101, 103, 101, 114, 34, 44, 34, 102, 111, 114, 109, 97, 116, 34, 58, 34, 105, 110, 116, 54, 52, 34, 125, 125, 125, 44, 34, 86, 101, 114, 105, 102, 105, 99, 97, 65, 116, 116, 105, 118, 105, 116, 97, 68, 116, 111, 34, 58, 123, 34, 116, 121, 112, 101, 34, 58, 34, 111, 98, 106, 101, 99, 116, 34, 44, 34, 112, 114, 111, 112, 101, 114, 116, 105, 101, 115, 34, 58, 123, 34, 105, 100, 34, 58, 123, 34, 116, 121, 112, 101, 34, 58, 34, 105, 110, 116, 101, 103, 101, 114, 34, 44, 34, 102, 111, 114, 109, 97, 116, 34, 58, 34, 105, 110, 116, 54, 52, 34, 125, 44, 34, 108, 97, 118, 111, 114, 97, 98, 105, 108, 101, 34, 58, 123, 34, 116, 121, 112, 101, 34, 58, 34, 98, 111, 111, 108, 101, 97, 110, 34, 125, 125, 125, 44, 34, 65, 116, 116, 105, 118, 105, 116, 97, 77, 111, 100, 101, 108, 34, 58, 123, 34, 116, 121, 112, 101, 34, 58, 34, 111, 98, 106, 101, 99, 116, 34, 44, 34, 112, 114, 111, 112, 101, 114, 116, 105, 101, 115, 34, 58, 123, 34, 105, 100, 34, 58, 123, 34, 116, 121, 112, 101, 34, 58, 34, 105, 110, 116, 101, 103, 101, 114, 34, 44, 34, 102, 111, 114, 109, 97, 116, 34, 58, 34, 105, 110, 116, 54, 52, 34, 125, 44, 34, 97, 108, 105, 97, 115, 34, 58, 123, 34, 116, 121, 112, 101, 34, 58, 34, 115, 116, 114, 105, 110, 103, 34, 125, 44, 34, 108, 97, 118, 111, 114, 97, 116, 97, 34, 58, 123, 34, 116, 121, 112, 101, 34, 58, 34, 115, 116, 114, 105, 110, 103, 34, 125, 44, 34, 97, 116, 116, 105, 118, 105, 116, 97, 80, 97, 100, 114, 101, 34, 58, 123, 34, 116, 121, 112, 101, 34, 58, 34, 105, 110, 116, 101, 103, 101, 114, 34, 44, 34, 102, 111, 114, 109, 97, 116, 34, 58, 34, 105, 110, 116, 54, 52, 34, 125, 125, 125, 125, 125, 125}]
+2024-04-15T09:26:01.088+02:00 TRACE 22076 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2024-04-15T09:26:01.088+02:00 TRACE 22076 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2024-04-15T09:26:01.088+02:00 DEBUG 22076 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK, headers={masked}
+2024-04-15T09:26:09.360+02:00 TRACE 22076 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/v1/attivita-api/all-attivita/", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2024-04-15T09:26:09.360+02:00 TRACE 22076 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to it.gestore_attivita.gestore_attivita.rest.attività.AttivitaController#attivitaList()
+2024-04-15T09:26:09.360+02:00 TRACE 22076 --- [http-nio-8080-exec-5] o.s.web.method.HandlerMethod             : Arguments: []
+2024-04-15T09:26:09.536+02:00  INFO 22076 --- [http-nio-8080-exec-5] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [127.0.0.1:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class io.confluent.kafka.serializers.KafkaAvroSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class io.confluent.kafka.serializers.KafkaAvroSerializer
 
-org.apache.kafka.common.errors.TimeoutException: Timed out waiting for a node assignment. Call: fetchMetadata
+2024-04-15T09:26:09.552+02:00  INFO 22076 --- [http-nio-8080-exec-5] i.c.k.s.KafkaAvroSerializerConfig        : KafkaAvroSerializerConfig values: 
+	schema.registry.url = [http://127.0.0.1:8081]
+	max.schemas.per.subject = 1000
 
-2024-04-05T14:24:22.838+02:00 ERROR 12504 --- [restartedMain] o.springframework.kafka.core.KafkaAdmin  : Could not configure topics
+2024-04-15T09:26:09.557+02:00  INFO 22076 --- [http-nio-8080-exec-5] i.c.k.s.KafkaAvroSerializerConfig        : KafkaAvroSerializerConfig values: 
+	schema.registry.url = [http://127.0.0.1:8081]
+	max.schemas.per.subject = 1000
 
-org.springframework.kafka.KafkaException: Timed out waiting to get existing topics
-	at org.springframework.kafka.core.KafkaAdmin.lambda$checkPartitions$11(KafkaAdmin.java:520) ~[spring-kafka-3.1.2.jar:3.1.2]
-	at java.base/java.util.HashMap.forEach(HashMap.java:1429) ~[na:na]
-	at org.springframework.kafka.core.KafkaAdmin.checkPartitions(KafkaAdmin.java:499) ~[spring-kafka-3.1.2.jar:3.1.2]
-	at org.springframework.kafka.core.KafkaAdmin.addOrModifyTopicsIfNeeded(KafkaAdmin.java:392) ~[spring-kafka-3.1.2.jar:3.1.2]
-	at org.springframework.kafka.core.KafkaAdmin.initialize(KafkaAdmin.java:258) ~[spring-kafka-3.1.2.jar:3.1.2]
-	at org.springframework.kafka.core.KafkaAdmin.afterSingletonsInstantiated(KafkaAdmin.java:222) ~[spring-kafka-3.1.2.jar:3.1.2]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:986) ~[spring-beans-6.1.4.jar:6.1.4]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:959) ~[spring-context-6.1.4.jar:6.1.4]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624) ~[spring-context-6.1.4.jar:6.1.4]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.3.jar:3.2.3]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.2.3.jar:3.2.3]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.2.3.jar:3.2.3]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) ~[spring-boot-3.2.3.jar:3.2.3]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-3.2.3.jar:3.2.3]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-3.2.3.jar:3.2.3]
-	at it.gestore_attivita.gestore_attivita.GestoreAttivitaApplication.main(GestoreAttivitaApplication.java:15) ~[classes/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.2.3.jar:3.2.3]
-Caused by: java.util.concurrent.TimeoutException: null
-	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960) ~[na:na]
-	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095) ~[na:na]
-	at org.apache.kafka.common.internals.KafkaFutureImpl.get(KafkaFutureImpl.java:180) ~[kafka-clients-3.6.1.jar:na]
-	at org.springframework.kafka.core.KafkaAdmin.lambda$checkPartitions$11(KafkaAdmin.java:502) ~[spring-kafka-3.1.2.jar:3.1.2]
-	... 18 common frames omitted
-
-2024-04-05T14:24:23.953+02:00  INFO 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:24:23.954+02:00  WARN 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:24:25.152+02:00  INFO 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:24:25.153+02:00  WARN 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:24:26.349+02:00  INFO 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:24:26.349+02:00  WARN 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:24:27.332+02:00  INFO 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:24:27.332+02:00  WARN 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:24:28.413+02:00  INFO 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:24:28.413+02:00  WARN 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:24:29.290+02:00  INFO 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:24:29.291+02:00  WARN 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:24:30.274+02:00  INFO 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:24:30.274+02:00  WARN 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:24:31.468+02:00  INFO 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:24:31.469+02:00  WARN 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:24:32.657+02:00  INFO 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:24:32.658+02:00  WARN 12504 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:24:32.857+02:00  INFO 12504 --- [kafka-admin-client-thread | adminclient-1] o.a.k.clients.admin.KafkaAdminClient     : [AdminClient clientId=adminclient-1] Forcing a hard I/O thread shutdown. Requests in progress will be aborted.
-2024-04-05T14:24:32.858+02:00  INFO 12504 --- [kafka-admin-client-thread | adminclient-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for adminclient-1 unregistered
-2024-04-05T14:24:32.860+02:00  INFO 12504 --- [kafka-admin-client-thread | adminclient-1] o.a.k.c.a.i.AdminMetadataManager         : [AdminClient clientId=adminclient-1] Metadata update failed
-
-org.apache.kafka.common.errors.TimeoutException: The AdminClient thread has exited. Call: fetchMetadata
-
-2024-04-05T14:24:32.860+02:00  INFO 12504 --- [kafka-admin-client-thread | adminclient-1] o.a.k.clients.admin.KafkaAdminClient     : [AdminClient clientId=adminclient-1] Timed out 2 remaining operation(s) during close.
-2024-04-05T14:24:32.865+02:00  INFO 12504 --- [kafka-admin-client-thread | adminclient-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
-2024-04-05T14:24:32.865+02:00  INFO 12504 --- [kafka-admin-client-thread | adminclient-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
-2024-04-05T14:24:32.865+02:00  INFO 12504 --- [kafka-admin-client-thread | adminclient-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
-2024-04-05T14:24:32.891+02:00  INFO 12504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
-2024-04-05T14:24:32.910+02:00  INFO 12504 --- [restartedMain] i.g.g.GestoreAttivitaApplication         : Started GestoreAttivitaApplication in 51.025 seconds (process running for 52.024)
-2024-04-05T14:40:21.743+02:00  INFO 12504 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-04-05T14:40:21.762+02:00  INFO 12504 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-04-05T14:40:21.765+02:00  INFO 12504 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-04-05T14:40:29.497+02:00  INFO 42712 --- [restartedMain] i.g.g.GestoreAttivitaApplication         : Starting GestoreAttivitaApplication using Java 20.0.1 with PID 42712 (C:\Users\hp\Desktop\ZERODD\Java\activity\gestore_attivita\gestione_attivita_main_service\gestore_attivita\target\classes started by hp in C:\Users\hp\Desktop\ZERODD\Java\activity\gestore_attivita\gestione_attivita_main_service\gestore_attivita)
-2024-04-05T14:40:29.502+02:00  INFO 42712 --- [restartedMain] i.g.g.GestoreAttivitaApplication         : The following 1 profile is active: "local"
-2024-04-05T14:40:29.612+02:00  INFO 42712 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-04-05T14:40:31.522+02:00  INFO 42712 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-04-05T14:40:31.649+02:00  INFO 42712 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 108 ms. Found 1 JPA repository interface.
-2024-04-05T14:40:33.097+02:00  INFO 42712 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-04-05T14:40:33.132+02:00  INFO 42712 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-04-05T14:40:33.132+02:00  INFO 42712 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
-2024-04-05T14:40:33.225+02:00  INFO 42712 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-04-05T14:40:33.226+02:00  INFO 42712 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3612 ms
-2024-04-05T14:40:33.284+02:00  INFO 42712 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-04-05T14:40:33.726+02:00  INFO 42712 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:C:/Users/hp/Desktop/ZERODD/Java/activity/gestore_attivita/gestione_attivita_main_service/gestore_attivita/H2db user=YOUR_USERNAME
-2024-04-05T14:40:33.729+02:00  INFO 42712 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-04-05T14:40:33.745+02:00  INFO 42712 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:C:/Users/hp/Desktop/ZERODD/Java/activity/gestore_attivita/gestione_attivita_main_service/gestore_attivita/H2db'
-2024-04-05T14:40:33.759+02:00 TRACE 42712 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Added existing Servlet initializer bean 'dispatcherServletRegistration'; order=2147483647, resource=class path resource [org/springframework/boot/autoconfigure/web/servlet/DispatcherServletAutoConfiguration$DispatcherServletRegistrationConfiguration.class]
-2024-04-05T14:40:33.759+02:00 TRACE 42712 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Added existing Servlet initializer bean 'h2Console'; order=2147483647, resource=class path resource [org/springframework/boot/autoconfigure/h2/H2ConsoleAutoConfiguration.class]
-2024-04-05T14:40:33.779+02:00 TRACE 42712 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Created Filter initializer for bean 'characterEncodingFilter'; order=-2147483648, resource=class path resource [org/springframework/boot/autoconfigure/web/servlet/HttpEncodingAutoConfiguration.class]
-2024-04-05T14:40:33.780+02:00 TRACE 42712 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Created Filter initializer for bean 'formContentFilter'; order=-9900, resource=class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration.class]
-2024-04-05T14:40:33.780+02:00 TRACE 42712 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Created Filter initializer for bean 'requestContextFilter'; order=-105, resource=class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]
-2024-04-05T14:40:33.785+02:00 DEBUG 42712 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
-2024-04-05T14:40:33.786+02:00 DEBUG 42712 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: dispatcherServlet urls=[/], h2Console urls=[/h2-console/*]
-2024-04-05T14:40:34.071+02:00  INFO 42712 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-04-05T14:40:34.255+02:00  INFO 42712 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
-2024-04-05T14:40:34.329+02:00  INFO 42712 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-04-05T14:40:34.748+02:00  INFO 42712 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-04-05T14:40:36.013+02:00  INFO 42712 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-04-05T14:40:36.067+02:00  INFO 42712 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-04-05T14:40:36.727+02:00  INFO 42712 --- [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2024-04-05T14:40:37.359+02:00  INFO 42712 --- [restartedMain] i.g.g.kafka.config.KafkaTopicConfig      : Nome topic kafka: gestoreAtt
-2024-04-05T14:40:37.655+02:00  WARN 42712 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-04-05T14:40:37.793+02:00 TRACE 42712 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+2024-04-15T09:26:09.564+02:00  INFO 22076 --- [http-nio-8080-exec-5] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2024-04-15T09:26:09.592+02:00  INFO 22076 --- [http-nio-8080-exec-5] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.1
+2024-04-15T09:26:09.592+02:00  INFO 22076 --- [http-nio-8080-exec-5] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e3c2b738d253ff5
+2024-04-15T09:26:09.592+02:00  INFO 22076 --- [http-nio-8080-exec-5] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1713165969592
+2024-04-15T09:26:09.614+02:00  INFO 22076 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: 4ImkLbveR5a0zt4BYg113A
+2024-04-15T09:26:09.617+02:00  INFO 22076 --- [kafka-producer-network-thread | producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 6 with epoch 0
+2024-04-15T09:26:09.710+02:00 DEBUG 22076 --- [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2024-04-15T09:26:09.713+02:00 TRACE 22076 --- [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[]]
+2024-04-15T09:26:09.714+02:00 TRACE 22076 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2024-04-15T09:26:09.715+02:00 TRACE 22076 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2024-04-15T09:26:09.715+02:00 DEBUG 22076 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK, headers={masked}
+2024-04-15T09:26:40.556+02:00 TRACE 22076 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : POST "/v1/attivita-api/insert/", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2024-04-15T09:26:40.557+02:00 TRACE 22076 --- [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to it.gestore_attivita.gestore_attivita.rest.attività.AttivitaController#insertAttivita(InsertAttivitaRequestDto)
+2024-04-15T09:26:40.564+02:00 TRACE 22076 --- [http-nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [InsertAttivitaRequestDto(alias=a1, lavorata=SI, attivitaPadre=null)]
+2024-04-15T09:26:40.564+02:00 TRACE 22076 --- [http-nio-8080-exec-6] o.s.web.method.HandlerMethod             : Arguments: [InsertAttivitaRequestDto(alias=a1, lavorata=SI, attivitaPadre=null)]
+2024-04-15T09:26:40.564+02:00  INFO 22076 --- [http-nio-8080-exec-6] i.g.g.rest.log.LogHandler                : Insernedo una nuova attività nel db
+2024-04-15T09:26:40.564+02:00  INFO 22076 --- [http-nio-8080-exec-6] i.g.g.rest.log.LogHandler                : InsertAttivitaRequestDto(alias=a1, lavorata=SI, attivitaPadre=null)
+2024-04-15T09:26:40.629+02:00  INFO 22076 --- [http-nio-8080-exec-6] i.g.g.r.a.s.impl.AttivitaServiceImpl     : Attività passata al microservizio:
+2024-04-15T09:26:40.629+02:00  INFO 22076 --- [http-nio-8080-exec-6] i.g.g.r.a.s.impl.AttivitaServiceImpl     : AttivitaRequestDto(id=1, alias=a1, lavorata=true, attivitaPadre=null)
+2024-04-15T09:26:40.629+02:00  INFO 22076 --- [http-nio-8080-exec-6] i.g.g.ws.WebServiceConfig                : http://192.168.1.3:5050/v1/logs-api//insert-attivita
+2024-04-15T09:26:40.640+02:00 DEBUG 22076 --- [http-nio-8080-exec-6] o.s.web.client.RestTemplate              : HTTP POST http://192.168.1.3:5050/v1/logs-api/insert-attivita
+2024-04-15T09:26:40.647+02:00 DEBUG 22076 --- [http-nio-8080-exec-6] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2024-04-15T09:26:40.655+02:00 DEBUG 22076 --- [http-nio-8080-exec-6] o.s.web.client.RestTemplate              : Writing [AttivitaRequestDto(id=1, alias=a1, lavorata=true, attivitaPadre=null)] with org.springframework.http.converter.json.MappingJackson2HttpMessageConverter
+2024-04-15T09:27:01.682+02:00 DEBUG 22076 --- [http-nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler it.gestore_attivita.gestore_attivita.rest.GestoreAttivitaAdviceController#handle500Error(Exception)
+2024-04-15T09:27:01.688+02:00 TRACE 22076 --- [http-nio-8080-exec-6] o.s.web.method.HandlerMethod             : Arguments: [org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://192.168.1.3:5050/v1/logs-api/insert-attivita": Connection timed out: connect]
+2024-04-15T09:27:01.689+02:00  INFO 22076 --- [http-nio-8080-exec-6] i.g.g.rest.log.LogHandler                : Exception occurs
+2024-04-15T09:27:01.689+02:00  INFO 22076 --- [http-nio-8080-exec-6] i.g.g.rest.log.LogHandler                : I/O error on POST request for "http://192.168.1.3:5050/v1/logs-api/insert-attivita": Connection timed out: connect
+2024-04-15T09:27:01.689+02:00 ERROR 22076 --- [http-nio-8080-exec-6] i.g.g.rest.log.LogHandler                : erro dto di seguito: 
+2024-04-15T09:27:01.689+02:00 ERROR 22076 --- [http-nio-8080-exec-6] i.g.g.r.GestoreAttivitaAdviceController  : error:
+2024-04-15T09:27:01.689+02:00 DEBUG 22076 --- [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2024-04-15T09:27:01.689+02:00 TRACE 22076 --- [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ErrorDto(status=500 INTERNAL_SERVER_ERROR, message=Errore interno al server, timestamp=2024-04-15T09:27:01.689377, description=I/O error on POST request for "http://192.168.1.3:5050/v1/logs-api/insert-attivita": Connection timed out: connect)]
+2024-04-15T09:27:01.696+02:00  WARN 22076 --- [http-nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://192.168.1.3:5050/v1/logs-api/insert-attivita": Connection timed out: connect]
+2024-04-15T09:27:01.696+02:00 TRACE 22076 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2024-04-15T09:27:01.696+02:00 DEBUG 22076 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 500 INTERNAL_SERVER_ERROR, headers={masked}
+2024-04-15T09:29:38.836+02:00  INFO 22076 --- [SpringApplicationShutdownHook] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2024-04-15T09:29:38.851+02:00  INFO 22076 --- [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2024-04-15T09:29:38.851+02:00  INFO 22076 --- [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-04-15T09:29:38.851+02:00  INFO 22076 --- [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2024-04-15T09:29:38.851+02:00  INFO 22076 --- [SpringApplicationShutdownHook] o.a.kafka.common.utils.AppInfoParser     : App info kafka.producer for producer-1 unregistered
+2024-04-15T09:29:38.854+02:00  INFO 22076 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-15T09:29:38.856+02:00  INFO 22076 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-04-15T09:29:38.864+02:00  INFO 22076 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-04-15T10:02:34.079+02:00  INFO 16612 --- [restartedMain] i.g.g.GestoreAttivitaApplication         : Starting GestoreAttivitaApplication using Java 22 with PID 16612 (C:\Users\RAFFAELE\Desktop\esercitazione\gestione_attivita\gestione_attivita_main_service\gestore_attivita\target\classes started by RAFFAELE in C:\Users\RAFFAELE\Desktop\esercitazione\gestione_attivita\gestione_attivita_main_service\gestore_attivita)
+2024-04-15T10:02:34.079+02:00  INFO 16612 --- [restartedMain] i.g.g.GestoreAttivitaApplication         : The following 1 profile is active: "docker"
+2024-04-15T10:02:34.119+02:00  INFO 16612 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-04-15T10:02:34.973+02:00  INFO 16612 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-15T10:02:35.036+02:00  INFO 16612 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 50 ms. Found 1 JPA repository interface.
+2024-04-15T10:02:35.791+02:00  INFO 16612 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-04-15T10:02:35.807+02:00  INFO 16612 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-04-15T10:02:35.807+02:00  INFO 16612 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-15T10:02:35.885+02:00  INFO 16612 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-04-15T10:02:35.885+02:00  INFO 16612 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1766 ms
+2024-04-15T10:02:35.885+02:00 TRACE 16612 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Added existing Servlet initializer bean 'dispatcherServletRegistration'; order=2147483647, resource=class path resource [org/springframework/boot/autoconfigure/web/servlet/DispatcherServletAutoConfiguration$DispatcherServletRegistrationConfiguration.class]
+2024-04-15T10:02:35.900+02:00 TRACE 16612 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Created Filter initializer for bean 'characterEncodingFilter'; order=-2147483648, resource=class path resource [org/springframework/boot/autoconfigure/web/servlet/HttpEncodingAutoConfiguration.class]
+2024-04-15T10:02:35.900+02:00 TRACE 16612 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Created Filter initializer for bean 'formContentFilter'; order=-9900, resource=class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration.class]
+2024-04-15T10:02:35.900+02:00 TRACE 16612 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Created Filter initializer for bean 'requestContextFilter'; order=-105, resource=class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]
+2024-04-15T10:02:35.900+02:00 DEBUG 16612 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
+2024-04-15T10:02:35.900+02:00 DEBUG 16612 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: dispatcherServlet urls=[/]
+2024-04-15T10:02:36.038+02:00  INFO 16612 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-15T10:02:36.208+02:00  INFO 16612 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@510ffafd
+2024-04-15T10:02:36.210+02:00  INFO 16612 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-15T10:02:36.235+02:00  INFO 16612 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-15T10:02:36.317+02:00  INFO 16612 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-15T10:02:36.354+02:00  INFO 16612 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-15T10:02:36.590+02:00  INFO 16612 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-15T10:02:36.667+02:00  WARN 16612 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-15T10:02:37.340+02:00  INFO 16612 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-15T10:02:37.410+02:00  INFO 16612 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-15T10:02:37.780+02:00  INFO 16612 --- [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-04-15T10:02:38.156+02:00  INFO 16612 --- [restartedMain] i.g.g.kafka.config.KafkaTopicConfig      : Nome topic kafka: gestoreAtt
+2024-04-15T10:02:38.339+02:00  WARN 16612 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-15T10:02:38.409+02:00 TRACE 16612 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
 	i.g.g.r.a.AttivitaController:
-	{PUT [/v1/attivita-api/attivita/lavora/{idAttivita}]}: lavoraAttivita(Long)
-	{POST [/v1/attivita-api/insert/]}: insertAttivita(InsertAttivitaRequestDto)
-	{GET [/v1/attivita-api/attivita/{id}]}: getAttivitaById(Long)
-	{GET [/v1/attivita-api/all-attivita/]}: attivitaList()
 	{GET [/v1/attivita-api/attivita/verifica/{idAttivita}]}: checkLavorabilitaAttivita(Long)
-2024-04-05T14:40:37.804+02:00 TRACE 42712 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	{GET [/v1/attivita-api/attivita/{id}]}: getAttivitaById(Long)
+	{POST [/v1/attivita-api/insert/]}: insertAttivita(InsertAttivitaRequestDto)
+	{GET [/v1/attivita-api/all-attivita/]}: attivitaList()
+	{PUT [/v1/attivita-api/attivita/lavora/{idAttivita}]}: lavoraAttivita(Long)
+2024-04-15T10:02:38.425+02:00 TRACE 16612 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
 	o.s.b.a.w.s.e.BasicErrorController:
 	{ [/error]}: error(HttpServletRequest)
 	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
-2024-04-05T14:40:37.828+02:00 TRACE 42712 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+2024-04-15T10:02:38.441+02:00 TRACE 16612 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
 	o.s.w.a.OpenApiWebMvcResource:
-	{GET [/v3/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
 	{GET [/v3/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)
-2024-04-05T14:40:37.831+02:00 TRACE 42712 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	{GET [/v3/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+2024-04-15T10:02:38.441+02:00 TRACE 16612 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
 	o.s.w.u.SwaggerWelcomeWebMvc:
 	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)
-2024-04-05T14:40:37.832+02:00 TRACE 42712 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+2024-04-15T10:02:38.441+02:00 TRACE 16612 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
 	o.s.w.u.SwaggerConfigResource:
 	{GET [/v3/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)
-2024-04-05T14:40:37.838+02:00 DEBUG 42712 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 11 mappings in 'requestMappingHandlerMapping'
-2024-04-05T14:40:37.862+02:00 DEBUG 42712 --- [restartedMain] o.s.w.s.h.BeanNameUrlHandlerMapping      : Detected 0 mappings in 'beanNameHandlerMapping'
-2024-04-05T14:40:38.026+02:00 TRACE 42712 --- [restartedMain] o.s.w.s.f.support.RouterFunctionMapping  : 0 RouterFunction(s) in 'routerFunctionMapping'
-2024-04-05T14:40:38.056+02:00 TRACE 42712 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/webjars/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
-2024-04-05T14:40:38.057+02:00 TRACE 42712 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
-2024-04-05T14:40:38.058+02:00 TRACE 42712 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/swagger-ui*/*swagger-initializer.js] onto ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
-2024-04-05T14:40:38.058+02:00 TRACE 42712 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/swagger-ui*/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
-2024-04-05T14:40:38.058+02:00 DEBUG 42712 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
-2024-04-05T14:40:38.167+02:00 DEBUG 42712 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2024-04-05T14:40:38.233+02:00 DEBUG 42712 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2024-04-05T14:40:38.621+02:00  INFO 42712 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2024-04-05T14:40:38.684+02:00  INFO 42712 --- [restartedMain] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values: 
+2024-04-15T10:02:38.441+02:00 DEBUG 16612 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 11 mappings in 'requestMappingHandlerMapping'
+2024-04-15T10:02:38.457+02:00 DEBUG 16612 --- [restartedMain] o.s.w.s.h.BeanNameUrlHandlerMapping      : Detected 0 mappings in 'beanNameHandlerMapping'
+2024-04-15T10:02:38.535+02:00 TRACE 16612 --- [restartedMain] o.s.w.s.f.support.RouterFunctionMapping  : 0 RouterFunction(s) in 'routerFunctionMapping'
+2024-04-15T10:02:38.556+02:00 TRACE 16612 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/webjars/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2024-04-15T10:02:38.556+02:00 TRACE 16612 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-04-15T10:02:38.556+02:00 TRACE 16612 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/swagger-ui*/*swagger-initializer.js] onto ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2024-04-15T10:02:38.556+02:00 TRACE 16612 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/swagger-ui*/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2024-04-15T10:02:38.556+02:00 DEBUG 16612 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2024-04-15T10:02:38.604+02:00 DEBUG 16612 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-15T10:02:38.623+02:00 DEBUG 16612 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-15T10:02:38.842+02:00  INFO 16612 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-04-15T10:02:38.874+02:00  INFO 16612 --- [restartedMain] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values: 
 	auto.include.jmx.reporter = true
 	bootstrap.servers = [localhost:9092]
 	client.dns.lookup = use_all_dns_ips
@@ -469,138 +453,16 @@ org.apache.kafka.common.errors.TimeoutException: The AdminClient thread has exit
 	ssl.truststore.password = null
 	ssl.truststore.type = JKS
 
-2024-04-05T14:40:38.988+02:00  INFO 42712 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.1
-2024-04-05T14:40:38.989+02:00  INFO 42712 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e3c2b738d253ff5
-2024-04-05T14:40:38.989+02:00  INFO 42712 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1712320838986
-2024-04-05T14:40:39.013+02:00  INFO 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:40:39.015+02:00  WARN 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:40:39.131+02:00  INFO 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:40:39.131+02:00  WARN 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:40:39.242+02:00  INFO 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:40:39.243+02:00  WARN 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:40:39.459+02:00  INFO 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:40:39.459+02:00  WARN 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:40:40.007+02:00  INFO 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:40:40.007+02:00  WARN 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:40:40.988+02:00  INFO 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:40:40.988+02:00  WARN 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:40:41.857+02:00  INFO 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:40:41.857+02:00  WARN 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:40:42.729+02:00  INFO 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:40:42.730+02:00  WARN 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:40:43.709+02:00  INFO 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:40:43.709+02:00  WARN 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:40:44.907+02:00  INFO 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:40:44.907+02:00  WARN 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:40:46.000+02:00  INFO 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:40:46.001+02:00  WARN 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:40:46.980+02:00  INFO 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:40:46.980+02:00  WARN 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:40:48.177+02:00  INFO 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:40:48.177+02:00  WARN 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:40:49.270+02:00  INFO 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:40:49.270+02:00  WARN 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:40:50.137+02:00  INFO 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:40:50.138+02:00  WARN 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:40:51.224+02:00  INFO 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:40:51.224+02:00  WARN 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:40:52.423+02:00  INFO 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:40:52.424+02:00  WARN 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:40:53.511+02:00  INFO 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:40:53.512+02:00  WARN 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:40:54.388+02:00  INFO 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:40:54.389+02:00  WARN 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:40:55.583+02:00  INFO 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:40:55.583+02:00  WARN 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:40:56.560+02:00  INFO 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:40:56.561+02:00  WARN 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:40:57.651+02:00  INFO 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:40:57.652+02:00  WARN 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:40:58.743+02:00  INFO 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:40:58.744+02:00  WARN 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:40:59.610+02:00  INFO 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:40:59.612+02:00  WARN 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:41:00.701+02:00  INFO 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:41:00.702+02:00  WARN 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:41:01.790+02:00  INFO 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:41:01.790+02:00  WARN 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:41:02.663+02:00  INFO 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:41:02.663+02:00  WARN 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:41:03.753+02:00  INFO 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:41:03.753+02:00  WARN 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:41:04.946+02:00  INFO 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:41:04.946+02:00  WARN 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:41:05.925+02:00  INFO 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:41:05.925+02:00  WARN 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:41:07.120+02:00  INFO 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:41:07.121+02:00  WARN 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:41:08.209+02:00  INFO 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:41:08.209+02:00  WARN 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:41:09.000+02:00  INFO 42712 --- [kafka-admin-client-thread | adminclient-1] o.a.k.c.a.i.AdminMetadataManager         : [AdminClient clientId=adminclient-1] Metadata update failed
-
-org.apache.kafka.common.errors.TimeoutException: Timed out waiting for a node assignment. Call: fetchMetadata
-
-2024-04-05T14:41:09.000+02:00 ERROR 42712 --- [restartedMain] o.springframework.kafka.core.KafkaAdmin  : Could not configure topics
-
-org.springframework.kafka.KafkaException: Timed out waiting to get existing topics
-	at org.springframework.kafka.core.KafkaAdmin.lambda$checkPartitions$11(KafkaAdmin.java:520) ~[spring-kafka-3.1.2.jar:3.1.2]
-	at java.base/java.util.HashMap.forEach(HashMap.java:1429) ~[na:na]
-	at org.springframework.kafka.core.KafkaAdmin.checkPartitions(KafkaAdmin.java:499) ~[spring-kafka-3.1.2.jar:3.1.2]
-	at org.springframework.kafka.core.KafkaAdmin.addOrModifyTopicsIfNeeded(KafkaAdmin.java:392) ~[spring-kafka-3.1.2.jar:3.1.2]
-	at org.springframework.kafka.core.KafkaAdmin.initialize(KafkaAdmin.java:258) ~[spring-kafka-3.1.2.jar:3.1.2]
-	at org.springframework.kafka.core.KafkaAdmin.afterSingletonsInstantiated(KafkaAdmin.java:222) ~[spring-kafka-3.1.2.jar:3.1.2]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:986) ~[spring-beans-6.1.4.jar:6.1.4]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:959) ~[spring-context-6.1.4.jar:6.1.4]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624) ~[spring-context-6.1.4.jar:6.1.4]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.3.jar:3.2.3]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.2.3.jar:3.2.3]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.2.3.jar:3.2.3]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) ~[spring-boot-3.2.3.jar:3.2.3]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-3.2.3.jar:3.2.3]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-3.2.3.jar:3.2.3]
-	at it.gestore_attivita.gestore_attivita.GestoreAttivitaApplication.main(GestoreAttivitaApplication.java:15) ~[classes/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.2.3.jar:3.2.3]
-Caused by: java.util.concurrent.TimeoutException: null
-	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960) ~[na:na]
-	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095) ~[na:na]
-	at org.apache.kafka.common.internals.KafkaFutureImpl.get(KafkaFutureImpl.java:180) ~[kafka-clients-3.6.1.jar:na]
-	at org.springframework.kafka.core.KafkaAdmin.lambda$checkPartitions$11(KafkaAdmin.java:502) ~[spring-kafka-3.1.2.jar:3.1.2]
-	... 18 common frames omitted
-
-2024-04-05T14:41:09.345+02:00  INFO 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:41:09.345+02:00  WARN 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:41:10.324+02:00  INFO 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:41:10.325+02:00  WARN 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:41:11.192+02:00  INFO 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:41:11.192+02:00  WARN 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:41:12.387+02:00  INFO 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:41:12.388+02:00  WARN 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:41:13.365+02:00  INFO 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:41:13.366+02:00  WARN 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:41:14.231+02:00  INFO 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:41:14.231+02:00  WARN 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:41:15.424+02:00  INFO 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:41:15.425+02:00  WARN 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:41:16.290+02:00  INFO 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:41:16.290+02:00  WARN 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:41:17.276+02:00  INFO 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:41:17.276+02:00  WARN 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:41:18.258+02:00  INFO 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
-2024-04-05T14:41:18.258+02:00  WARN 42712 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2024-04-05T14:41:19.018+02:00  INFO 42712 --- [kafka-admin-client-thread | adminclient-1] o.a.k.clients.admin.KafkaAdminClient     : [AdminClient clientId=adminclient-1] Forcing a hard I/O thread shutdown. Requests in progress will be aborted.
-2024-04-05T14:41:19.019+02:00  INFO 42712 --- [kafka-admin-client-thread | adminclient-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for adminclient-1 unregistered
-2024-04-05T14:41:19.020+02:00  INFO 42712 --- [kafka-admin-client-thread | adminclient-1] o.a.k.c.a.i.AdminMetadataManager         : [AdminClient clientId=adminclient-1] Metadata update failed
-
-org.apache.kafka.common.errors.TimeoutException: The AdminClient thread has exited. Call: fetchMetadata
-
-2024-04-05T14:41:19.022+02:00  INFO 42712 --- [kafka-admin-client-thread | adminclient-1] o.a.k.clients.admin.KafkaAdminClient     : [AdminClient clientId=adminclient-1] Timed out 2 remaining operation(s) during close.
-2024-04-05T14:41:19.028+02:00  INFO 42712 --- [kafka-admin-client-thread | adminclient-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
-2024-04-05T14:41:19.029+02:00  INFO 42712 --- [kafka-admin-client-thread | adminclient-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
-2024-04-05T14:41:19.030+02:00  INFO 42712 --- [kafka-admin-client-thread | adminclient-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
-2024-04-05T14:41:19.057+02:00  INFO 42712 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
-2024-04-05T14:41:19.078+02:00  INFO 42712 --- [restartedMain] i.g.g.GestoreAttivitaApplication         : Started GestoreAttivitaApplication in 50.435 seconds (process running for 51.608)
-2024-04-05T14:48:49.093+02:00  INFO 42712 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-04-05T14:48:49.101+02:00  INFO 42712 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-04-05T14:48:49.106+02:00  INFO 42712 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-04-15T10:02:39.030+02:00  INFO 16612 --- [restartedMain] o.a.k.clients.admin.AdminClientConfig    : These configurations '[schema.registry.url]' were supplied but are not used yet.
+2024-04-15T10:02:39.030+02:00  INFO 16612 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.1
+2024-04-15T10:02:39.030+02:00  INFO 16612 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e3c2b738d253ff5
+2024-04-15T10:02:39.030+02:00  INFO 16612 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1713168159030
+2024-04-15T10:02:39.393+02:00  INFO 16612 --- [kafka-admin-client-thread | adminclient-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for adminclient-1 unregistered
+2024-04-15T10:02:39.397+02:00  INFO 16612 --- [kafka-admin-client-thread | adminclient-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2024-04-15T10:02:39.397+02:00  INFO 16612 --- [kafka-admin-client-thread | adminclient-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-04-15T10:02:39.397+02:00  INFO 16612 --- [kafka-admin-client-thread | adminclient-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2024-04-15T10:02:39.407+02:00  INFO 16612 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-04-15T10:02:39.407+02:00  INFO 16612 --- [restartedMain] i.g.g.GestoreAttivitaApplication         : Started GestoreAttivitaApplication in 5.825 seconds (process running for 6.416)
+2024-04-15T10:02:43.630+02:00  INFO 16612 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-15T10:02:43.630+02:00  INFO 16612 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-04-15T10:02:43.646+02:00  INFO 16612 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

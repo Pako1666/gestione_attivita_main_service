@@ -16,11 +16,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = {
-		GestoreAttivitaApplication.class
-}, webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 class GestoreAttivitaApplicationTests {
-
 
 
 	@Test

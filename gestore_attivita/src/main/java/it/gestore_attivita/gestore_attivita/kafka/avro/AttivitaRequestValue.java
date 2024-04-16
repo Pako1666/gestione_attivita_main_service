@@ -13,24 +13,24 @@ import org.apache.avro.message.BinaryMessageDecoder;
 import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
-public class AttivitaRequestGenerated extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 3449857860938221008L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"AttivitaRequestGenerated\",\"namespace\":\"it.gestore_attivita.gestore_attivita.kafka.avro\",\"fields\":[{\"name\":\"id\",\"type\":\"long\"},{\"name\":\"alias\",\"type\":\"string\"},{\"name\":\"lavorata\",\"type\":\"boolean\"},{\"name\":\"attivitaPadre\",\"type\":[\"null\",\"long\"],\"default\":null}]}");
+public class AttivitaRequestValue extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
+  private static final long serialVersionUID = 3500428375797503580L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"AttivitaRequestValue\",\"namespace\":\"it.gestore_attivita.gestore_attivita.kafka.avro\",\"fields\":[{\"name\":\"id\",\"type\":\"long\"},{\"name\":\"alias\",\"type\":\"string\",\"avro.java.string\":\"String\"},{\"name\":\"lavorata\",\"type\":\"boolean\"},{\"name\":\"attivitaPadre\",\"type\":[\"null\",\"long\"],\"default\":null}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
 
-  private static final BinaryMessageEncoder<AttivitaRequestGenerated> ENCODER =
-      new BinaryMessageEncoder<AttivitaRequestGenerated>(MODEL$, SCHEMA$);
+  private static final BinaryMessageEncoder<AttivitaRequestValue> ENCODER =
+      new BinaryMessageEncoder<AttivitaRequestValue>(MODEL$, SCHEMA$);
 
-  private static final BinaryMessageDecoder<AttivitaRequestGenerated> DECODER =
-      new BinaryMessageDecoder<AttivitaRequestGenerated>(MODEL$, SCHEMA$);
+  private static final BinaryMessageDecoder<AttivitaRequestValue> DECODER =
+      new BinaryMessageDecoder<AttivitaRequestValue>(MODEL$, SCHEMA$);
 
   /**
    * Return the BinaryMessageEncoder instance used by this class.
    * @return the message encoder used by this class
    */
-  public static BinaryMessageEncoder<AttivitaRequestGenerated> getEncoder() {
+  public static BinaryMessageEncoder<AttivitaRequestValue> getEncoder() {
     return ENCODER;
   }
 
@@ -38,7 +38,7 @@ public class AttivitaRequestGenerated extends org.apache.avro.specific.SpecificR
    * Return the BinaryMessageDecoder instance used by this class.
    * @return the message decoder used by this class
    */
-  public static BinaryMessageDecoder<AttivitaRequestGenerated> getDecoder() {
+  public static BinaryMessageDecoder<AttivitaRequestValue> getDecoder() {
     return DECODER;
   }
 
@@ -47,12 +47,12 @@ public class AttivitaRequestGenerated extends org.apache.avro.specific.SpecificR
    * @param resolver a {@link SchemaStore} used to find schemas by fingerprint
    * @return a BinaryMessageDecoder instance for this class backed by the given SchemaStore
    */
-  public static BinaryMessageDecoder<AttivitaRequestGenerated> createDecoder(SchemaStore resolver) {
-    return new BinaryMessageDecoder<AttivitaRequestGenerated>(MODEL$, SCHEMA$, resolver);
+  public static BinaryMessageDecoder<AttivitaRequestValue> createDecoder(SchemaStore resolver) {
+    return new BinaryMessageDecoder<AttivitaRequestValue>(MODEL$, SCHEMA$, resolver);
   }
 
   /**
-   * Serializes this AttivitaRequestGenerated to a ByteBuffer.
+   * Serializes this AttivitaRequestValue to a ByteBuffer.
    * @return a buffer holding the serialized data for this instance
    * @throws java.io.IOException if this instance could not be serialized
    */
@@ -61,12 +61,12 @@ public class AttivitaRequestGenerated extends org.apache.avro.specific.SpecificR
   }
 
   /**
-   * Deserializes a AttivitaRequestGenerated from a ByteBuffer.
+   * Deserializes a AttivitaRequestValue from a ByteBuffer.
    * @param b a byte buffer holding serialized data for an instance of this class
-   * @return a AttivitaRequestGenerated instance decoded from the given buffer
+   * @return a AttivitaRequestValue instance decoded from the given buffer
    * @throws java.io.IOException if the given bytes could not be deserialized into an instance of this class
    */
-  public static AttivitaRequestGenerated fromByteBuffer(
+  public static AttivitaRequestValue fromByteBuffer(
       java.nio.ByteBuffer b) throws java.io.IOException {
     return DECODER.decode(b);
   }
@@ -81,7 +81,7 @@ public class AttivitaRequestGenerated extends org.apache.avro.specific.SpecificR
    * to their default values from the schema.  If that is desired then
    * one should use <code>newBuilder()</code>.
    */
-  public AttivitaRequestGenerated() {}
+  public AttivitaRequestValue() {}
 
   /**
    * All-args constructor.
@@ -90,7 +90,7 @@ public class AttivitaRequestGenerated extends org.apache.avro.specific.SpecificR
    * @param lavorata The new value for lavorata
    * @param attivitaPadre The new value for attivitaPadre
    */
-  public AttivitaRequestGenerated(java.lang.Long id, java.lang.CharSequence alias, java.lang.Boolean lavorata, java.lang.Long attivitaPadre) {
+  public AttivitaRequestValue(java.lang.Long id, java.lang.CharSequence alias, java.lang.Boolean lavorata, java.lang.Long attivitaPadre) {
     this.id = id;
     this.alias = alias;
     this.lavorata = lavorata;
@@ -191,45 +191,45 @@ public class AttivitaRequestGenerated extends org.apache.avro.specific.SpecificR
   }
 
   /**
-   * Creates a new AttivitaRequestGenerated RecordBuilder.
-   * @return A new AttivitaRequestGenerated RecordBuilder
+   * Creates a new AttivitaRequestValue RecordBuilder.
+   * @return A new AttivitaRequestValue RecordBuilder
    */
-  public static it.gestore_attivita.gestore_attivita.kafka.avro.AttivitaRequestGenerated.Builder newBuilder() {
-    return new it.gestore_attivita.gestore_attivita.kafka.avro.AttivitaRequestGenerated.Builder();
+  public static it.gestore_attivita.gestore_attivita.kafka.avro.AttivitaRequestValue.Builder newBuilder() {
+    return new it.gestore_attivita.gestore_attivita.kafka.avro.AttivitaRequestValue.Builder();
   }
 
   /**
-   * Creates a new AttivitaRequestGenerated RecordBuilder by copying an existing Builder.
+   * Creates a new AttivitaRequestValue RecordBuilder by copying an existing Builder.
    * @param other The existing builder to copy.
-   * @return A new AttivitaRequestGenerated RecordBuilder
+   * @return A new AttivitaRequestValue RecordBuilder
    */
-  public static it.gestore_attivita.gestore_attivita.kafka.avro.AttivitaRequestGenerated.Builder newBuilder(it.gestore_attivita.gestore_attivita.kafka.avro.AttivitaRequestGenerated.Builder other) {
+  public static it.gestore_attivita.gestore_attivita.kafka.avro.AttivitaRequestValue.Builder newBuilder(it.gestore_attivita.gestore_attivita.kafka.avro.AttivitaRequestValue.Builder other) {
     if (other == null) {
-      return new it.gestore_attivita.gestore_attivita.kafka.avro.AttivitaRequestGenerated.Builder();
+      return new it.gestore_attivita.gestore_attivita.kafka.avro.AttivitaRequestValue.Builder();
     } else {
-      return new it.gestore_attivita.gestore_attivita.kafka.avro.AttivitaRequestGenerated.Builder(other);
+      return new it.gestore_attivita.gestore_attivita.kafka.avro.AttivitaRequestValue.Builder(other);
     }
   }
 
   /**
-   * Creates a new AttivitaRequestGenerated RecordBuilder by copying an existing AttivitaRequestGenerated instance.
+   * Creates a new AttivitaRequestValue RecordBuilder by copying an existing AttivitaRequestValue instance.
    * @param other The existing instance to copy.
-   * @return A new AttivitaRequestGenerated RecordBuilder
+   * @return A new AttivitaRequestValue RecordBuilder
    */
-  public static it.gestore_attivita.gestore_attivita.kafka.avro.AttivitaRequestGenerated.Builder newBuilder(it.gestore_attivita.gestore_attivita.kafka.avro.AttivitaRequestGenerated other) {
+  public static it.gestore_attivita.gestore_attivita.kafka.avro.AttivitaRequestValue.Builder newBuilder(it.gestore_attivita.gestore_attivita.kafka.avro.AttivitaRequestValue other) {
     if (other == null) {
-      return new it.gestore_attivita.gestore_attivita.kafka.avro.AttivitaRequestGenerated.Builder();
+      return new it.gestore_attivita.gestore_attivita.kafka.avro.AttivitaRequestValue.Builder();
     } else {
-      return new it.gestore_attivita.gestore_attivita.kafka.avro.AttivitaRequestGenerated.Builder(other);
+      return new it.gestore_attivita.gestore_attivita.kafka.avro.AttivitaRequestValue.Builder(other);
     }
   }
 
   /**
-   * RecordBuilder for AttivitaRequestGenerated instances.
+   * RecordBuilder for AttivitaRequestValue instances.
    */
   @org.apache.avro.specific.AvroGenerated
-  public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<AttivitaRequestGenerated>
-    implements org.apache.avro.data.RecordBuilder<AttivitaRequestGenerated> {
+  public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<AttivitaRequestValue>
+    implements org.apache.avro.data.RecordBuilder<AttivitaRequestValue> {
 
     private long id;
     private java.lang.CharSequence alias;
@@ -245,7 +245,7 @@ public class AttivitaRequestGenerated extends org.apache.avro.specific.SpecificR
      * Creates a Builder by copying an existing Builder.
      * @param other The existing Builder to copy.
      */
-    private Builder(it.gestore_attivita.gestore_attivita.kafka.avro.AttivitaRequestGenerated.Builder other) {
+    private Builder(it.gestore_attivita.gestore_attivita.kafka.avro.AttivitaRequestValue.Builder other) {
       super(other);
       if (isValidValue(fields()[0], other.id)) {
         this.id = data().deepCopy(fields()[0].schema(), other.id);
@@ -266,10 +266,10 @@ public class AttivitaRequestGenerated extends org.apache.avro.specific.SpecificR
     }
 
     /**
-     * Creates a Builder by copying an existing AttivitaRequestGenerated instance
+     * Creates a Builder by copying an existing AttivitaRequestValue instance
      * @param other The existing instance to copy.
      */
-    private Builder(it.gestore_attivita.gestore_attivita.kafka.avro.AttivitaRequestGenerated other) {
+    private Builder(it.gestore_attivita.gestore_attivita.kafka.avro.AttivitaRequestValue other) {
       super(SCHEMA$);
       if (isValidValue(fields()[0], other.id)) {
         this.id = data().deepCopy(fields()[0].schema(), other.id);
@@ -303,7 +303,7 @@ public class AttivitaRequestGenerated extends org.apache.avro.specific.SpecificR
       * @param value The value of 'id'.
       * @return This builder.
       */
-    public it.gestore_attivita.gestore_attivita.kafka.avro.AttivitaRequestGenerated.Builder setId(long value) {
+    public it.gestore_attivita.gestore_attivita.kafka.avro.AttivitaRequestValue.Builder setId(long value) {
       validate(fields()[0], value);
       this.id = value;
       fieldSetFlags()[0] = true;
@@ -323,7 +323,7 @@ public class AttivitaRequestGenerated extends org.apache.avro.specific.SpecificR
       * Clears the value of the 'id' field.
       * @return This builder.
       */
-    public it.gestore_attivita.gestore_attivita.kafka.avro.AttivitaRequestGenerated.Builder clearId() {
+    public it.gestore_attivita.gestore_attivita.kafka.avro.AttivitaRequestValue.Builder clearId() {
       fieldSetFlags()[0] = false;
       return this;
     }
@@ -342,7 +342,7 @@ public class AttivitaRequestGenerated extends org.apache.avro.specific.SpecificR
       * @param value The value of 'alias'.
       * @return This builder.
       */
-    public it.gestore_attivita.gestore_attivita.kafka.avro.AttivitaRequestGenerated.Builder setAlias(java.lang.CharSequence value) {
+    public it.gestore_attivita.gestore_attivita.kafka.avro.AttivitaRequestValue.Builder setAlias(java.lang.CharSequence value) {
       validate(fields()[1], value);
       this.alias = value;
       fieldSetFlags()[1] = true;
@@ -362,7 +362,7 @@ public class AttivitaRequestGenerated extends org.apache.avro.specific.SpecificR
       * Clears the value of the 'alias' field.
       * @return This builder.
       */
-    public it.gestore_attivita.gestore_attivita.kafka.avro.AttivitaRequestGenerated.Builder clearAlias() {
+    public it.gestore_attivita.gestore_attivita.kafka.avro.AttivitaRequestValue.Builder clearAlias() {
       alias = null;
       fieldSetFlags()[1] = false;
       return this;
@@ -382,7 +382,7 @@ public class AttivitaRequestGenerated extends org.apache.avro.specific.SpecificR
       * @param value The value of 'lavorata'.
       * @return This builder.
       */
-    public it.gestore_attivita.gestore_attivita.kafka.avro.AttivitaRequestGenerated.Builder setLavorata(boolean value) {
+    public it.gestore_attivita.gestore_attivita.kafka.avro.AttivitaRequestValue.Builder setLavorata(boolean value) {
       validate(fields()[2], value);
       this.lavorata = value;
       fieldSetFlags()[2] = true;
@@ -402,7 +402,7 @@ public class AttivitaRequestGenerated extends org.apache.avro.specific.SpecificR
       * Clears the value of the 'lavorata' field.
       * @return This builder.
       */
-    public it.gestore_attivita.gestore_attivita.kafka.avro.AttivitaRequestGenerated.Builder clearLavorata() {
+    public it.gestore_attivita.gestore_attivita.kafka.avro.AttivitaRequestValue.Builder clearLavorata() {
       fieldSetFlags()[2] = false;
       return this;
     }
@@ -421,7 +421,7 @@ public class AttivitaRequestGenerated extends org.apache.avro.specific.SpecificR
       * @param value The value of 'attivitaPadre'.
       * @return This builder.
       */
-    public it.gestore_attivita.gestore_attivita.kafka.avro.AttivitaRequestGenerated.Builder setAttivitaPadre(java.lang.Long value) {
+    public it.gestore_attivita.gestore_attivita.kafka.avro.AttivitaRequestValue.Builder setAttivitaPadre(java.lang.Long value) {
       validate(fields()[3], value);
       this.attivitaPadre = value;
       fieldSetFlags()[3] = true;
@@ -441,7 +441,7 @@ public class AttivitaRequestGenerated extends org.apache.avro.specific.SpecificR
       * Clears the value of the 'attivitaPadre' field.
       * @return This builder.
       */
-    public it.gestore_attivita.gestore_attivita.kafka.avro.AttivitaRequestGenerated.Builder clearAttivitaPadre() {
+    public it.gestore_attivita.gestore_attivita.kafka.avro.AttivitaRequestValue.Builder clearAttivitaPadre() {
       attivitaPadre = null;
       fieldSetFlags()[3] = false;
       return this;
@@ -449,9 +449,9 @@ public class AttivitaRequestGenerated extends org.apache.avro.specific.SpecificR
 
     @Override
     @SuppressWarnings("unchecked")
-    public AttivitaRequestGenerated build() {
+    public AttivitaRequestValue build() {
       try {
-        AttivitaRequestGenerated record = new AttivitaRequestGenerated();
+        AttivitaRequestValue record = new AttivitaRequestValue();
         record.id = fieldSetFlags()[0] ? this.id : (java.lang.Long) defaultValue(fields()[0]);
         record.alias = fieldSetFlags()[1] ? this.alias : (java.lang.CharSequence) defaultValue(fields()[1]);
         record.lavorata = fieldSetFlags()[2] ? this.lavorata : (java.lang.Boolean) defaultValue(fields()[2]);
@@ -466,8 +466,8 @@ public class AttivitaRequestGenerated extends org.apache.avro.specific.SpecificR
   }
 
   @SuppressWarnings("unchecked")
-  private static final org.apache.avro.io.DatumWriter<AttivitaRequestGenerated>
-    WRITER$ = (org.apache.avro.io.DatumWriter<AttivitaRequestGenerated>)MODEL$.createDatumWriter(SCHEMA$);
+  private static final org.apache.avro.io.DatumWriter<AttivitaRequestValue>
+    WRITER$ = (org.apache.avro.io.DatumWriter<AttivitaRequestValue>)MODEL$.createDatumWriter(SCHEMA$);
 
   @Override public void writeExternal(java.io.ObjectOutput out)
     throws java.io.IOException {
@@ -475,8 +475,8 @@ public class AttivitaRequestGenerated extends org.apache.avro.specific.SpecificR
   }
 
   @SuppressWarnings("unchecked")
-  private static final org.apache.avro.io.DatumReader<AttivitaRequestGenerated>
-    READER$ = (org.apache.avro.io.DatumReader<AttivitaRequestGenerated>)MODEL$.createDatumReader(SCHEMA$);
+  private static final org.apache.avro.io.DatumReader<AttivitaRequestValue>
+    READER$ = (org.apache.avro.io.DatumReader<AttivitaRequestValue>)MODEL$.createDatumReader(SCHEMA$);
 
   @Override public void readExternal(java.io.ObjectInput in)
     throws java.io.IOException {

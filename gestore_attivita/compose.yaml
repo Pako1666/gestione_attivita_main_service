@@ -12,7 +12,7 @@ services:
       - "MYSQL_ALLOW_EMPTY_PASSWORD=yes"
       - "MYSQL_RANDOM_ROOT_PASSWORD=no"
     ports:
-      - "3306:3306"
+      - "3307:3307"
     networks:
       conn:
         ipv4_address: 192.168.1.2
@@ -22,8 +22,8 @@ services:
    container_name: 'logservice'
    hostname: logservice.com
    build:
-     context: '../../../service_2/gestione_attivita_log_service/log_service'
-     dockerfile: '../../../service_2/gestione_attivita_log_service/log_service/Dockerfile'
+     context: '../../../gestione_attivita/gestione_attivita_log_service/log_service'
+     dockerfile: 'Dockerfile'
    
    
    

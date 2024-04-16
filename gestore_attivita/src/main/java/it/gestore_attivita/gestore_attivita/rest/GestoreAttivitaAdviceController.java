@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
+import java.util.Arrays;
+
 @RestControllerAdvice
 @Slf4j
 public class GestoreAttivitaAdviceController {
@@ -29,6 +31,8 @@ public class GestoreAttivitaAdviceController {
     @ExceptionHandler({NullPointerException.class, RuntimeException.class})
     public ResponseEntity<ErrorDto> handle500Error(Exception e){
 
+        log.error("error:");
+        e.printStackTrace();
         return ResponseEntity
                 .status(500)
                 .body(

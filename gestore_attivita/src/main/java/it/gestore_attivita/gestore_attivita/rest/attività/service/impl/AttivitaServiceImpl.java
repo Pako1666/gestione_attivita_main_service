@@ -65,7 +65,11 @@ public class AttivitaServiceImpl implements AttivitaService {
                 .collect(Collectors.toList());
 
         //webServiceConfig.doGet(LogEndpoints.FETCH_ALL_ATTIVITA, Boolean.class);
-        kafkaProducer.fetchAllAttivitas(fromDtoToModel(attivitas.get(0)));
+
+
+        kafkaProducer.fetchAllAttivitas(fromDtoToModel(attivitas.size()>0?attivitas.get(0):new AttivitaResponseDto(
+                1L,"a1",true,null
+        )));
         return attivitas;
     }
 

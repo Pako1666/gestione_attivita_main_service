@@ -1,14 +1,11 @@
 package it.gestore_attivita.gestore_attivita.kafka;
 
-import it.gestore_attivita.gestore_attivita.kafka.avro.AttivitaRequestGenerated;
+import it.gestore_attivita.gestore_attivita.kafka.avro.AttivitaRequestKey;
+import it.gestore_attivita.gestore_attivita.kafka.avro.AttivitaRequestValue;
 import it.gestore_attivita.gestore_attivita.rest.attività.model.AttivitaModel;
-import org.apache.coyote.Processor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.core.KafkaTemplate;
-import org.springframework.messaging.Message;
-import org.springframework.messaging.support.MessageBuilder;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 
@@ -19,15 +16,21 @@ public class KafkaProducer {
     private String kafkaTopic;
 
     @Autowired
-    private KafkaTemplate<String,AttivitaRequestGenerated> kafkaTemplate;
+    private KafkaTemplate<AttivitaRequestKey, AttivitaRequestValue> kafkaTemplate;
 
 
     public void fetchAllAttivitas(AttivitaModel attivitaModel){
-        kafkaTemplate.send(kafkaTopic,fromModelToGenerated(attivitaModel));
+        AttivitaRequestValue generated = fromModelToGenerated(attivitaModel);
+        AttivitaRequestKey key = new AttivitaRequestKey();
+        key.setId("ciao");
+        kafkaTemplate.send(kafkaTopic,key,generated);
     }
 
-    private AttivitaRequestGenerated fromModelToGenerated(AttivitaModel model){
-        AttivitaRequestGenerated generated = new AttivitaRequestGenerated();
+
+
+
+    private AttivitaRequestValue fromModelToGenerated(AttivitaModel model){
+        AttivitaRequestValue generated = new AttivitaRequestValue();
         generated.setId(model.getId());
         generated.setAlias(model.getAlias());
         generated.setLavorata(model.getLavorata().equals("SI"));

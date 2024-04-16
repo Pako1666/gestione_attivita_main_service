@@ -18,7 +18,8 @@ public class AttivitaModel {
     @Column(name = "lavorata",columnDefinition="char(2)")
     public String lavorata;
 
-    @Column(name = "attivita_padre")
+    @Column(name = "attiv" +
+            "ita_padre")
     public Long attivitaPadre;
 
 

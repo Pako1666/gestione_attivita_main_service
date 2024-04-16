@@ -90,6 +90,12 @@
 			<version>2.1.0</version>
 		</dependency-->
 		<dependency>
+			<groupId>io.confluent</groupId>
+			<artifactId>kafka-schema-registry-client</artifactId>
+			<version>4.0.0</version> <!-- Inserisci la versione corretta -->
+		</dependency>
+
+		<dependency>
 			<groupId>com.mysql</groupId>
 			<artifactId>mysql-connector-j</artifactId>
 			<scope>runtime</scope>
@@ -149,7 +155,27 @@
 			<artifactId>spring-test</artifactId>
 			<version>6.0.12</version>
 		</dependency>
+		<dependency>
+			<groupId>io.confluent</groupId>
+			<artifactId>kafka-avro-serializer</artifactId>
+			<version>4.0.0</version>
+		</dependency>
 
+		<dependency>
+			<groupId>io.confluent</groupId>
+			<artifactId>kafka-schema-registry</artifactId>
+			<version>3.3.1</version>
+		</dependency>
+		<dependency>
+			<groupId>io.confluent</groupId>
+			<artifactId>kafka-avro-serializer</artifactId>
+			<version>3.3.1</version>
+		</dependency>
+		<dependency>
+			<groupId>io.confluent</groupId>
+			<artifactId>kafka-streams-avro-serde</artifactId>
+			<version>3.3.1</version>
+		</dependency>
 	</dependencies>
 
 	<build>

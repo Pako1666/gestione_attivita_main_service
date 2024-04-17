@@ -182,6 +182,10 @@ public class AttivitaServiceImpl implements AttivitaService {
         lavorabile = checkLavorabile(fromDtoToModel(attivita));
         resp.setLavorabile(lavorabile);
 
+        if(!lavorabile){
+            resp.setIdAttivitaPadre(attivita.getAttivitaPadre());
+        }
+
         kafkaProducer.attivitaTopicProduce(KafkaKeysEnum.CHECK_ATTIVITA,attivita);
         return resp;
     }

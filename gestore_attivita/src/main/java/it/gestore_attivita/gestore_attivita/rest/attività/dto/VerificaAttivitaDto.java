@@ -14,5 +14,5 @@ public class VerificaAttivitaDto {
 
     public Long id;
     private Boolean lavorabile;
-
+    private Long idAttivitaPadre;
 }

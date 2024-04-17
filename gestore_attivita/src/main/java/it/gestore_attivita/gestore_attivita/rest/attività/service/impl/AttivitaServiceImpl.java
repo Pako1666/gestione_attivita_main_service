@@ -2,6 +2,7 @@ package it.gestore_attivita.gestore_attivita.rest.attività.service.impl;
 
 
 import it.gestore_attivita.gestore_attivita.exception.NotFoundException;
+import it.gestore_attivita.gestore_attivita.kafka.KafkaKeysEnum;
 import it.gestore_attivita.gestore_attivita.kafka.KafkaProducer;
 import it.gestore_attivita.gestore_attivita.rest.attività.dto.AttivitaResponseDto;
 import it.gestore_attivita.gestore_attivita.rest.attività.dto.InsertAttivitaRequestDto;
@@ -50,7 +51,7 @@ public class AttivitaServiceImpl implements AttivitaService {
         );
 
 
-        webServiceConfig.doGet(LogEndpoints.FETCH_ATTIVITA,Boolean.class,id+"");
+        kafkaProducer.attivitaTopicProduce(KafkaKeysEnum.FETCH_ATTIVITA_BY_ID,attivitaModel);
 
         //restituisco il dto
         return fromModelToDto(attivitaModel);
@@ -130,7 +131,7 @@ public class AttivitaServiceImpl implements AttivitaService {
                 .build();
 
         log.info("Attività passata al consumer:");
-        kafkaProducer.insertNewAttivita(dto);
+        kafkaProducer.attivitaTopicProduce(KafkaKeysEnum.INSERT_ATTIVITA,dto);
         return dto;
 
     }
@@ -173,18 +174,11 @@ public class AttivitaServiceImpl implements AttivitaService {
         VerificaAttivitaDto resp = new VerificaAttivitaDto();
         Boolean lavorabile = false;
         AttivitaResponseDto attivita = this.getAttivita(idAttivita);
-
         resp.setId(attivita.getId());
-
         lavorabile = checkLavorabile(fromDtoToModel(attivita));
         resp.setLavorabile(lavorabile);
 
-        AttivitaRequestDto att = new AttivitaRequestDto();
-        att.setAlias(attivita.getAlias());
-        att.setId(attivita.getId());
-        att.setAttivitaPadre(attivita.getAttivitaPadre());
-        att.setLavorata(attivita.getLavorata());
-        webServiceConfig.doPost("verifica-attivita",att,Boolean.class);
+        kafkaProducer.attivitaTopicProduce(KafkaKeysEnum.CHECK_ATTIVITA,attivita);
         return resp;
     }
 
@@ -209,12 +203,7 @@ public class AttivitaServiceImpl implements AttivitaService {
 
             resp.setLavorata(true);
 
-            AttivitaRequestDto att = new AttivitaRequestDto();
-            att.setAlias(attivitaM.getAlias());
-            att.setId(attivitaM.getId());
-            att.setAttivitaPadre(attivitaM.getAttivitaPadre());
-            att.setLavorata(attivitaM.getLavorata().equals("SI"));
-            webServiceConfig.doPost(LogEndpoints.LAVORA_ATTIVITA,att,Boolean.class);
+            kafkaProducer.attivitaTopicProduce(KafkaKeysEnum.LAVORA_ATTIVITA,attivitaM);
 
         }
         else {

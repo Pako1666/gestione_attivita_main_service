@@ -39,7 +39,7 @@ public class AttivitaController {
     @GetMapping("all-attivita/")
     public ResponseEntity<List<AttivitaResponseDto>> attivitaList(){
 
-        return ResponseEntity.ok().body(attivitaService.getAllAttivita());
+        return ResponseEntity.ok().body(attivitaService.getAllAttivita(null,null));
     }
 
     @Operation(summary="insert Attivita entity into database")

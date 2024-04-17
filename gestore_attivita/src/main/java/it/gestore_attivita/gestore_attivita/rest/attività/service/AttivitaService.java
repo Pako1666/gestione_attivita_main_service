@@ -12,7 +12,7 @@ public interface AttivitaService {
 
     AttivitaResponseDto getAttivita(Long id) throws Exception;
 
-    List<AttivitaResponseDto> getAllAttivita();
+    List<AttivitaResponseDto> getAllAttivita(Integer numItems,Integer numPage);
 
     //List<AttivitaResponseDto> getAllAttivitaByAttivitaPadre(Long idFather) throws NotFoundException;
 

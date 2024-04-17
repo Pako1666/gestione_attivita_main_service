@@ -17,6 +17,7 @@ import it.gestore_attivita.gestore_attivita.ws.model.AttivitaRequestDto;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import scala.Int;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -58,7 +59,9 @@ public class AttivitaServiceImpl implements AttivitaService {
     }
 
     @Override
-    public List<AttivitaResponseDto> getAllAttivita() {
+    public List<AttivitaResponseDto> getAllAttivita(Integer numItems, Integer numPage) {
+
+
 
         List<AttivitaResponseDto> attivitas = attivitaRepository.findAll()
                 .stream()

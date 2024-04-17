@@ -6,6 +6,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import it.gestore_attivita.gestore_attivita.exception.NotFoundException;
 import it.gestore_attivita.gestore_attivita.rest.attività.dto.AttivitaResponseDto;
 import it.gestore_attivita.gestore_attivita.rest.attività.dto.InsertAttivitaRequestDto;
 import it.gestore_attivita.gestore_attivita.rest.attività.dto.LavoraAttivitaDto;
@@ -48,7 +49,7 @@ public class AttivitaController {
             @ApiResponse(responseCode = "400", description = "Bad Request!"),
     })
     @PostMapping("insert/")
-    public ResponseEntity<AttivitaResponseDto> insertAttivita(@RequestBody InsertAttivitaRequestDto req){
+    public ResponseEntity<AttivitaResponseDto> insertAttivita(@RequestBody InsertAttivitaRequestDto req) throws NotFoundException {
         return ResponseEntity.ok().body(
                 attivitaService.insertAttivita(req)
         );

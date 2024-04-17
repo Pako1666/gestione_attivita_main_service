@@ -114,9 +114,14 @@ public class AttivitaServiceImpl implements AttivitaService {
 
 
     @Override
-    public AttivitaResponseDto insertAttivita(InsertAttivitaRequestDto req) {
+    public AttivitaResponseDto insertAttivita(InsertAttivitaRequestDto req) throws NotFoundException {
         AttivitaModel model = new AttivitaModel();
-        model.setAttivitaPadre(req.getAttivitaPadre());
+
+        if(attivitaRepository.findAllIds().contains(req.getAttivitaPadre()))
+            model.setAttivitaPadre(req.getAttivitaPadre());
+
+        else throw new NotFoundException(req.getAttivitaPadre()+" non esiste!");
+
         model.setAlias(req.getAlias());
         model.setLavorata(req.getLavorata());
 
@@ -138,7 +143,7 @@ public class AttivitaServiceImpl implements AttivitaService {
 
 
     private Boolean checkLavorabile(AttivitaModel attivita) throws NotFoundException {
-        Boolean lavorabile = false;
+        Boolean lavorabile = true;
         List<AttivitaResponseDto> attivitaPadri = new ArrayList<>();
 
         /**
@@ -146,11 +151,9 @@ public class AttivitaServiceImpl implements AttivitaService {
          *
          *
          * */
-        if(attivita.getAttivitaPadre()==null){
-            lavorabile = attivita.getLavorata().equals("SI");
-        }
 
-        else{
+
+        if(attivita.getAttivitaPadre()!=null){
             attivitaPadri = this.getAllAttivitaByAttivitaPadre(attivita.getAttivitaPadre());
             for(AttivitaResponseDto att : attivitaPadri){
 
@@ -165,6 +168,7 @@ public class AttivitaServiceImpl implements AttivitaService {
                 }
             }
         }
+
 
         return lavorabile;
     }
@@ -185,12 +189,13 @@ public class AttivitaServiceImpl implements AttivitaService {
     @Override
     public LavoraAttivitaDto lavoraAttivita(Long idAttivita) throws Exception {
         LavoraAttivitaDto resp = new LavoraAttivitaDto();
-        AttivitaModel attivitaM = new AttivitaModel();
+        AttivitaModel attivitaM = fromDtoToModel(this.getAttivita(idAttivita));;
         resp.setIdAttivita(idAttivita);
 
-        if(checkLavorabile(fromDtoToModel(getAttivita(idAttivita)))){
+        if(checkLavorabile(attivitaM)){
 
-            attivitaM = fromDtoToModel(this.getAttivita(idAttivita));
+
+            attivitaM.setId(idAttivita);
             if(attivitaM.getLavorata().equals("NO")){
                 attivitaM.setLavorata("SI");
                 attivitaRepository.save(attivitaM);
@@ -203,14 +208,13 @@ public class AttivitaServiceImpl implements AttivitaService {
 
             resp.setLavorata(true);
 
-            kafkaProducer.attivitaTopicProduce(KafkaKeysEnum.LAVORA_ATTIVITA,attivitaM);
-
         }
         else {
             resp.setMessage("Impossibile lavorare questa attività. Controlla che quelle precedenti siano state lavorate");
             resp.setLavorata(false);
         }
 
+        kafkaProducer.attivitaTopicProduce(KafkaKeysEnum.LAVORA_ATTIVITA,attivitaM);
 
 
         return resp;

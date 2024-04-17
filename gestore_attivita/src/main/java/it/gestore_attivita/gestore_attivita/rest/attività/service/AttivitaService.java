@@ -16,7 +16,7 @@ public interface AttivitaService {
 
     //List<AttivitaResponseDto> getAllAttivitaByAttivitaPadre(Long idFather) throws NotFoundException;
 
-    AttivitaResponseDto insertAttivita(InsertAttivitaRequestDto req);
+    AttivitaResponseDto insertAttivita(InsertAttivitaRequestDto req) throws NotFoundException;
 
     VerificaAttivitaDto verificaAttivita(Long idAttivita) throws Exception;
 

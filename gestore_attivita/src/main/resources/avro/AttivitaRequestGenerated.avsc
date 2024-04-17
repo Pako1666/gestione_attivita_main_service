@@ -1,6 +1,6 @@
 {
   "type": "record",
-  "name": "AttivitaRequestValue",
+  "name": "AttivitaRequestGenerated",
   "namespace": "it.gestore_attivita.gestore_attivita.kafka.avro",
   "fields": [
     {"name": "id", "type": "long"},

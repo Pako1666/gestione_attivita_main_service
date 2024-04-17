@@ -67,9 +67,7 @@ public class AttivitaServiceImpl implements AttivitaService {
         //webServiceConfig.doGet(LogEndpoints.FETCH_ALL_ATTIVITA, Boolean.class);
 
 
-        kafkaProducer.fetchAllAttivitas(fromDtoToModel(attivitas.size()>0?attivitas.get(0):new AttivitaResponseDto(
-                1L,"a1",true,null
-        )));
+        kafkaProducer.fetchAllAttivitas(attivitaRepository.findAll());
         return attivitas;
     }
 
@@ -131,10 +129,8 @@ public class AttivitaServiceImpl implements AttivitaService {
                 .lavorata(dto.getLavorata())
                 .build();
 
-        log.info("Attività passata al microservizio:");
-        log.info(att.toString());
-
-        webServiceConfig.doPost("insert-attivita", att, Boolean.class);
+        log.info("Attività passata al consumer:");
+        kafkaProducer.insertNewAttivita(dto);
         return dto;
 
     }

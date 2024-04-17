@@ -1,0 +1,24 @@
+{
+  "name": "AttivitaListSchema",
+  "namespace": "it.gestore_attivita.gestore_attivita.kafka.avro",
+  "type": "record",
+  "fields": [
+    {
+      "name": "attivitas",
+      "type": {
+        "type": "array",
+        "items": {
+          "type": "record",
+          "name": "AttivitaRequestGenerated",
+          "namespace": "it.gestore_attivita.gestore_attivita.kafka.avro",
+          "fields": [
+            {"name": "id", "type": "long"},
+            {"name": "alias", "type": "string", "avro.java.string": "String"},
+            {"name": "lavorata", "type": "boolean"},
+            {"name": "attivitaPadre", "type": ["null", "long"], "default": null}
+          ]
+        }
+      }
+    }
+  ]
+}

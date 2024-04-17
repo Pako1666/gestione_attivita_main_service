@@ -1,41 +1,90 @@
 package it.gestore_attivita.gestore_attivita.kafka;
 
+import it.gestore_attivita.gestore_attivita.kafka.avro.AttivitaListSchema;
+import it.gestore_attivita.gestore_attivita.kafka.avro.AttivitaRequestGenerated;
 import it.gestore_attivita.gestore_attivita.kafka.avro.AttivitaRequestKey;
-import it.gestore_attivita.gestore_attivita.kafka.avro.AttivitaRequestValue;
+import it.gestore_attivita.gestore_attivita.kafka.config.KafkaTopicNames;
+import it.gestore_attivita.gestore_attivita.rest.attività.dto.AttivitaResponseDto;
 import it.gestore_attivita.gestore_attivita.rest.attività.model.AttivitaModel;
+import it.gestore_attivita.gestore_attivita.ws.model.AttivitaRequestDto;
+import org.apache.kafka.common.protocol.types.Field;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 
 @Service
 public class KafkaProducer {
 
-    @Value("${kafka.topic-name}")
-    private String kafkaTopic;
 
     @Autowired
-    private KafkaTemplate<AttivitaRequestKey, AttivitaRequestValue> kafkaTemplate;
+    private KafkaTemplate<AttivitaRequestKey, org.apache.avro.specific.SpecificRecordBase> kafkaTemplate;
 
 
-    public void fetchAllAttivitas(AttivitaModel attivitaModel){
-        AttivitaRequestValue generated = fromModelToGenerated(attivitaModel);
+    public void fetchAllAttivitas(List<AttivitaModel> attivitaList){
+
         AttivitaRequestKey key = new AttivitaRequestKey();
-        key.setId("ciao");
-        kafkaTemplate.send(kafkaTopic,key,generated);
+        key.setId(KafkaKeysEnum.FETCH_ALL_ATTIVITAS.name());
+        List<AttivitaRequestGenerated> generatedList = attivitaList
+                .stream()
+                .map(
+                        e->fromModelToGenerated(e)
+                )
+                .toList()
+        ;
+
+        AttivitaListSchema schema = AttivitaListSchema
+                .newBuilder()
+                .setAttivitas(generatedList)
+                .build();
+
+
+        kafkaTemplate.send(KafkaTopicNames.ATTIVITA_LIST_TOPIC.getName(),key,schema);
+    }
+
+    public void insertNewAttivita(AttivitaResponseDto att){
+        AttivitaRequestGenerated generated = fromDtoToGenerated(att);
+
+        AttivitaRequestKey key = AttivitaRequestKey
+                .newBuilder()
+                .setId(KafkaKeysEnum.INSERT_ATTIVITA.name())
+                .build();
+        kafkaTemplate.send(KafkaTopicNames.ATTIVITA_TOPIC.getName(),key,generated);
     }
 
 
 
 
-    private AttivitaRequestValue fromModelToGenerated(AttivitaModel model){
-        AttivitaRequestValue generated = new AttivitaRequestValue();
+
+    private AttivitaRequestGenerated fromModelToGenerated(AttivitaModel model){
+        AttivitaRequestGenerated generated = new AttivitaRequestGenerated();
         generated.setId(model.getId());
         generated.setAlias(model.getAlias());
         generated.setLavorata(model.getLavorata().equals("SI"));
         generated.setAttivitaPadre(model.getAttivitaPadre());
         return generated;
     }
+
+    private AttivitaRequestGenerated fromDtoToGenerated(AttivitaResponseDto model){
+        AttivitaRequestGenerated generated = new AttivitaRequestGenerated();
+        generated.setId(model.getId());
+        generated.setAlias(model.getAlias());
+        generated.setLavorata(model.getLavorata());
+        generated.setAttivitaPadre(model.getAttivitaPadre());
+        return generated;
+    }
+
+    private AttivitaRequestGenerated fromDtoToGenerated(AttivitaRequestDto model){
+        AttivitaRequestGenerated generated = new AttivitaRequestGenerated();
+        generated.setId(model.getId());
+        generated.setAlias(model.getAlias());
+        generated.setLavorata(model.getLavorata());
+        generated.setAttivitaPadre(model.getAttivitaPadre());
+        return generated;
+    }
+
 
 }

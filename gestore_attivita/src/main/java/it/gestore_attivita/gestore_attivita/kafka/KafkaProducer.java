@@ -46,15 +46,7 @@ public class KafkaProducer {
         kafkaTemplate.send(KafkaTopicNames.ATTIVITA_LIST_TOPIC.getName(),key,schema);
     }
 
-    /*public void insertNewAttivita(AttivitaResponseDto att){
-        AttivitaRequestGenerated generated = fromDtoToGenerated(att);
 
-        AttivitaRequestKey key = AttivitaRequestKey
-                .newBuilder()
-                .setId(KafkaKeysEnum.INSERT_ATTIVITA.name())
-                .build();
-        kafkaTemplate.send(KafkaTopicNames.ATTIVITA_TOPIC.getName(),key,generated);
-    }*/
 
     public void attivitaTopicProduce(KafkaKeysEnum keyEnum, AttivitaResponseDto dto){
         AttivitaRequestGenerated generated = fromDtoToGenerated(dto);

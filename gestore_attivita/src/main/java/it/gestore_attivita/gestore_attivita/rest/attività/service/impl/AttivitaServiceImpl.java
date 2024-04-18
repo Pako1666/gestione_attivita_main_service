@@ -4,10 +4,7 @@ package it.gestore_attivita.gestore_attivita.rest.attività.service.impl;
 import it.gestore_attivita.gestore_attivita.exception.NotFoundException;
 import it.gestore_attivita.gestore_attivita.kafka.KafkaKeysEnum;
 import it.gestore_attivita.gestore_attivita.kafka.KafkaProducer;
-import it.gestore_attivita.gestore_attivita.rest.attività.dto.AttivitaResponseDto;
-import it.gestore_attivita.gestore_attivita.rest.attività.dto.InsertAttivitaRequestDto;
-import it.gestore_attivita.gestore_attivita.rest.attività.dto.LavoraAttivitaDto;
-import it.gestore_attivita.gestore_attivita.rest.attività.dto.VerificaAttivitaDto;
+import it.gestore_attivita.gestore_attivita.rest.attività.dto.*;
 import it.gestore_attivita.gestore_attivita.rest.attività.model.AttivitaModel;
 import it.gestore_attivita.gestore_attivita.rest.attività.model.AttivitaRepository;
 import it.gestore_attivita.gestore_attivita.rest.attività.service.AttivitaService;
@@ -15,7 +12,9 @@ import it.gestore_attivita.gestore_attivita.ws.LogEndpoints;
 import it.gestore_attivita.gestore_attivita.ws.WebServiceConfig;
 import it.gestore_attivita.gestore_attivita.ws.model.AttivitaRequestDto;
 import lombok.extern.slf4j.Slf4j;
+import org.springdoc.core.converters.models.Pageable;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import scala.Int;
 
@@ -59,15 +58,21 @@ public class AttivitaServiceImpl implements AttivitaService {
     }
 
     @Override
-    public List<AttivitaResponseDto> getAllAttivita(Integer numItems, Integer numPage) {
+    public List<AttivitaResponseDto> getAllAttivita(PageAttivitaDto pag) {
+        List<AttivitaResponseDto> attivitas=new ArrayList<>();
 
+        if(pag.getPage()!=null && pag.getItems()!=null && pag.getItems()>0)
 
-
-        List<AttivitaResponseDto> attivitas = attivitaRepository.findAll()
+            attivitas = attivitaRepository.findAll(PageRequest.of(pag.getPage(),pag.getItems()))
                 .stream()
                 .map(a -> fromModelToDto(a))
                 .collect(Collectors.toList());
 
+        else
+            attivitas = attivitaRepository.findAll()
+                    .stream()
+                    .map(a -> fromModelToDto(a))
+                    .collect(Collectors.toList());
         //webServiceConfig.doGet(LogEndpoints.FETCH_ALL_ATTIVITA, Boolean.class);
 
 

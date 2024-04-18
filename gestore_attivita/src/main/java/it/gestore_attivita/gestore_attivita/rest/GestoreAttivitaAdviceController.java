@@ -4,6 +4,7 @@ import it.gestore_attivita.gestore_attivita.exception.NotFoundException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
@@ -12,6 +13,7 @@ import java.util.Arrays;
 
 @RestControllerAdvice
 @Slf4j
+@CrossOrigin("*")
 public class GestoreAttivitaAdviceController {
 
     @ExceptionHandler(NotFoundException.class)

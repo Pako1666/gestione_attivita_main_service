@@ -1,10 +1,7 @@
 package it.gestore_attivita.gestore_attivita.rest.attività.service;
 
 import it.gestore_attivita.gestore_attivita.exception.NotFoundException;
-import it.gestore_attivita.gestore_attivita.rest.attività.dto.AttivitaResponseDto;
-import it.gestore_attivita.gestore_attivita.rest.attività.dto.InsertAttivitaRequestDto;
-import it.gestore_attivita.gestore_attivita.rest.attività.dto.LavoraAttivitaDto;
-import it.gestore_attivita.gestore_attivita.rest.attività.dto.VerificaAttivitaDto;
+import it.gestore_attivita.gestore_attivita.rest.attività.dto.*;
 
 import java.util.List;
 
@@ -12,7 +9,7 @@ public interface AttivitaService {
 
     AttivitaResponseDto getAttivita(Long id) throws Exception;
 
-    List<AttivitaResponseDto> getAllAttivita(Integer numItems,Integer numPage);
+    List<AttivitaResponseDto> getAllAttivita(PageAttivitaDto pag);
 
     //List<AttivitaResponseDto> getAllAttivitaByAttivitaPadre(Long idFather) throws NotFoundException;
 

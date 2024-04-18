@@ -7,12 +7,11 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import it.gestore_attivita.gestore_attivita.exception.NotFoundException;
-import it.gestore_attivita.gestore_attivita.rest.attività.dto.AttivitaResponseDto;
-import it.gestore_attivita.gestore_attivita.rest.attività.dto.InsertAttivitaRequestDto;
-import it.gestore_attivita.gestore_attivita.rest.attività.dto.LavoraAttivitaDto;
-import it.gestore_attivita.gestore_attivita.rest.attività.dto.VerificaAttivitaDto;
+import it.gestore_attivita.gestore_attivita.rest.attività.dto.*;
 import it.gestore_attivita.gestore_attivita.rest.attività.model.AttivitaModel;
 import it.gestore_attivita.gestore_attivita.rest.attività.service.impl.AttivitaServiceImpl;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -25,6 +24,7 @@ import java.util.List;
 @CrossOrigin(origins = "*")
 public class AttivitaController {
 
+    private static final Logger log = LoggerFactory.getLogger(AttivitaController.class);
     @Autowired
     private AttivitaServiceImpl attivitaService;
 
@@ -36,10 +36,10 @@ public class AttivitaController {
                             schema = @Schema(implementation = AttivitaModel.class)) }),
             @ApiResponse(responseCode = "400", description = "Bad Request!"),
             @ApiResponse(responseCode = "404", description = "Nessuna attività censita") })
-    @GetMapping("all-attivita/")
-    public ResponseEntity<List<AttivitaResponseDto>> attivitaList(){
-
-        return ResponseEntity.ok().body(attivitaService.getAllAttivita(null,null));
+    @PostMapping("all-attivita")
+    public ResponseEntity<List<AttivitaResponseDto>> attivitaList(@RequestBody PageAttivitaDto req){
+        //log.info(String.format("%d:%d",page,numItems));
+        return ResponseEntity.ok().body(attivitaService.getAllAttivita(req));
     }
 
     @Operation(summary="insert Attivita entity into database")

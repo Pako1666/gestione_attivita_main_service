@@ -9,6 +9,8 @@ public interface AttivitaService {
 
     AttivitaResponseDto getAttivita(Long id) throws Exception;
 
+    PaginatorResponseDto getPaginatorInfo(Integer num);
+
     List<AttivitaResponseDto> getAllAttivita(PageAttivitaDto pag);
 
     //List<AttivitaResponseDto> getAllAttivitaByAttivitaPadre(Long idFather) throws NotFoundException;

@@ -29,6 +29,19 @@ public class AttivitaController {
     private AttivitaServiceImpl attivitaService;
 
 
+    @Operation(summary="returns Paginator info")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Ottieni le info relative al paginator",
+                    content = { @Content(mediaType = "application/json") }
+            )
+    })
+
+    @GetMapping("pages-info/{num}")
+    public ResponseEntity<PaginatorResponseDto> paginatorInfo(@PathVariable Integer num){
+        //log.info(String.format("%d:%d",page,numItems));
+        return ResponseEntity.ok().body(attivitaService.getPaginatorInfo(num));
+    }
+
     @Operation(summary="returns all Attivita entities stored into database")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Ottieni la lista di Attività",

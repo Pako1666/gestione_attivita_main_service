@@ -14,6 +14,7 @@ import it.gestore_attivita.gestore_attivita.ws.model.AttivitaRequestDto;
 import lombok.extern.slf4j.Slf4j;
 import org.springdoc.core.converters.models.Pageable;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import scala.Int;
@@ -58,10 +59,23 @@ public class AttivitaServiceImpl implements AttivitaService {
     }
 
     @Override
+    public PaginatorResponseDto getPaginatorInfo(Integer num) {
+        Page<AttivitaModel> pagInfo = attivitaRepository.findAll(PageRequest.of(1, num));
+        int totalPages = pagInfo.getTotalPages();
+        long totalElements = pagInfo.getTotalElements();
+        return PaginatorResponseDto
+                .builder()
+                .totalPages(totalPages)
+                .totalElements(totalElements)
+                .build();
+    }
+
+    @Override
     public List<AttivitaResponseDto> getAllAttivita(PageAttivitaDto pag) {
         List<AttivitaResponseDto> attivitas=new ArrayList<>();
 
         if(pag.getPage()!=null && pag.getItems()!=null && pag.getItems()>0)
+
 
             attivitas = attivitaRepository.findAll(PageRequest.of(pag.getPage(),pag.getItems()))
                 .stream()
